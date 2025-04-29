@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civicomm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1><a href="index.html" data-value="Maria Giannisi">Maria Giannisi</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Bio</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <a href="project5.html">EN</a> | <a href="project5-de.html">DE</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="project-details">
+
+            <!-- First Row (3 columns) -->
+     <div class="project-info">
+        <div class="project-title">BACHELORARBEIT</div>
+        <div class="project-type">APP DESIGN</div>
+        <div class="project-description"> CiviComm steht für Civic -„einen Bürger betreffend” und ‚Community’. Dadurch soll der Fokus einer Gemeinschaft liegen ihre Stadt zu bemächtigen. Durch diese App können Bürger*innen, Probleme in seiner Nachbarschaft melden und gleichzeitig sich freiwillig engagieren. 
+             </div>
+     </div>
+
+    </section>     
+
+
+    <div class="full-image-wrapper">
+        <img class="full-image reduced-image" src="img/App_1.png" alt="Full Project Image">
+    </div>
+
+      <!-- Centered paragraph -->
+      <div class="project-paragraph">
+        <p>
+            Die App bietet Freiwilligenmöglichkeiten, die sowohl aus lokalen Gruppen, aus einzelnen Bürgern und von der Behörde veröffentlicht werden. 
+            Insbesondere zielt die App darauf ab, einen gemeinsame Verantwortungsübernahme zwischen Bürgern*innen und Staat zu fördern.
+
+        </p>
+    </div>
+
+    <!-- Second full-width image -->
+    <div class="full-image-wrapper">
+        <img class="full-image reduced-image" src="img/App_2.png" alt="Second Full Project Image">
+    </div>
+
+     <!-- Third full-width image -->
+     <div class="full-image-wrapper">
+        <img class="full-image smaller-image" src="img/App_3.gif" alt="Third Full Project Image">
+    </div>
+
+      <!-- Credits -->
+      <div class="credits">
+        <p>
+            <br>https://www.wedrivechange.org/<br>
+            Logo & Fotos: UEMI
+        </p>
+    </div>
+        
+    <div class="navigation-wrapper">
+        <a href="index.html" class="back-btn">Zurück zu allen Projekten</a>
+        <a href="project2.html" class="next-btn">Nächstes Projekt</a>
+    </div>
+
+
+    <footer>
+        <p>© 2025 Maria Giannisi</p>
+    </footer>
+
+    <script>
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()";
+        const scrambleElement = document.querySelector(".logo h1 a"); // fixed!
+        const targetText = scrambleElement.dataset.value;
+    
+        let interval = null;
+    
+        function scramble() {
+            let iteration = 0;
+    
+            clearInterval(interval);
+    
+            interval = setInterval(() => {
+                scrambleElement.innerText = targetText
+                    .split("")
+                    .map((letter, index) => {
+                        if (index < iteration) {
+                            return targetText[index];
+                        }
+                        return letters[Math.floor(Math.random() * letters.length)];
+                    })
+                    .join("");
+    
+                if (iteration >= targetText.length) { 
+                    clearInterval(interval);
+                    setTimeout(scramble, 3000); // Restart after 3 seconds pause
+                }
+    
+                iteration += 1 / 3;
+            }, 30);
+        }
+    
+        // Start scrambling on page load
+        window.onload = scramble;
+    </script>
+       
+
+</body>
+</html>

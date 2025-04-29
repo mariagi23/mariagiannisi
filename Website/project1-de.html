@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1><a href="index.html" data-value="Maria Giannisi">Maria Giannisi</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Bio</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <a href="project1.html">EN</a> | <a href="project1-de.html">DE</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="project-details">
+
+            <!-- First Row (3 columns) -->
+     <div class="project-info">
+        <div class="project-title">BROSCHÜRENDESIGN</div>
+        <div class="project-type">EDITORIAL</div>
+        <div class="project-description">WE DRIVE CHANGE ist ein Projekt, das darauf abzielt, Frauen durch Bildung, Beschäftigung und Interessenvertretung im sich schnell entwickelnden Bereich der Elektromobilität zu stärken. </div>
+     </div>
+
+    </section>     
+
+
+    <div class="full-image-wrapper">
+        <img class="full-image" src="img/Brochure_1.png" alt="Full Project Image">
+    </div>
+
+      <!-- Centered paragraph -->
+      <div class="project-paragraph">
+        <p>
+            Die Initiative konzentriert sich auf die Förderung nachhaltiger, inklusiver und geschlechtergerechter Mobilitätslösungen und treibt den Übergang zu saubereren Transportsystemen voran, die für alle zugänglich sind.
+            Durch die Förderung von Partnerschaften mit Regierungen, Universitäten, NGOs und dem privaten Sektor arbeitet das Projekt daran, Frauen die Möglichkeit zu geben, aktiv an der Entwicklung und Umsetzung innovativer Elektromobilitätslösungen teilzunehmen. Mit dieser Arbeit zielt WE DRIVE CHANGE darauf ab, zur globalen Klimaschutzinitiative beizutragen und gleichzeitig sicherzustellen, dass Frauen gleichberechtigt in die Gestaltung der Zukunft nachhaltiger Mobilität einbezogen werden.
+        </p>
+    </div>
+
+    <!-- Second full-width image -->
+    <div class="full-image-wrapper">
+        <img class="full-image" src="img/Brochure_2.png" alt="Second Full Project Image">
+    </div>
+
+      <!-- Credits -->
+      <div class="credits">
+        <p>
+            <br>https://www.wedrivechange.org/<br>
+            Logo & Fotos: UEMI
+        </p>
+    </div>
+        
+    <div class="navigation-wrapper">
+        <a href="index.html" class="back-btn">Zurück zu allen Projekten</a>
+        <a href="project2.html" class="next-btn">Nächstes Projekt</a>
+    </div>
+
+
+    <footer>
+        <p>© 2025 Maria Giannisi</p>
+    </footer>
+
+    <script>
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()";
+        const scrambleElement = document.querySelector(".logo h1 a"); // fixed!
+        const targetText = scrambleElement.dataset.value;
+    
+        let interval = null;
+    
+        function scramble() {
+            let iteration = 0;
+    
+            clearInterval(interval);
+    
+            interval = setInterval(() => {
+                scrambleElement.innerText = targetText
+                    .split("")
+                    .map((letter, index) => {
+                        if (index < iteration) {
+                            return targetText[index];
+                        }
+                        return letters[Math.floor(Math.random() * letters.length)];
+                    })
+                    .join("");
+    
+                if (iteration >= targetText.length) { 
+                    clearInterval(interval);
+                    setTimeout(scramble, 3000); // Restart after 3 seconds pause
+                }
+    
+                iteration += 1 / 3;
+            }, 30);
+        }
+    
+        // Start scrambling on page load
+        window.onload = scramble;
+    </script>
+       
+
+</body>
+</html>
+

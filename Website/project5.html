@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civicomm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1><a href="index.html" data-value="Maria Giannisi">Maria Giannisi</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Bio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <a href="project5.html">EN</a> | <a href="project5-de.html">DE</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="project-details">
+
+            <!-- First Row (3 columns) -->
+     <div class="project-info">
+        <div class="project-title">BACHELORARBEIT</div>
+        <div class="project-type">APP DESIGN</div>
+        <div class="project-description">CiviComm stands for Civic – “relating to a citizen” – and Community. The aim is to focus on empowering communities to take ownership of their city.
+
+            Through this app, citizens can report problems in their neighborhood and simultaneously get involved as volunteers.
+            
+            The app offers volunteer opportunities published by local groups, individual citizens, and government authorities.
+            
+            Its primary goal is to promote a sense of shared responsibility between citizens and the state.
+            
+             </div>
+     </div>
+
+    </section>     
+
+
+    <div class="full-image-wrapper">
+        <img class="full-image reduced-image" src="img/App_1.png" alt="Full Project Image">
+    </div>
+
+      <!-- Centered paragraph -->
+      <div class="project-paragraph">
+        <p>
+            The app offers volunteer opportunities published by local groups, individual citizens, and government authorities.
+
+            Its primary goal is to promote a sense of shared responsibility between citizens and the state.
+                    
+
+        </p>
+    </div>
+
+    <!-- Second full-width image -->
+    <div class="full-image-wrapper">
+        <img class="full-image reduced-image" src="img/App_2.png" alt="Second Full Project Image">
+    </div>
+
+     <!-- Third full-width image -->
+     <div class="full-image-wrapper">
+        <img class="full-image smaller-image" src="img/App_3.gif" alt="Third Full Project Image">
+    </div>
+
+      <!-- Credits -->
+      <div class="credits">
+        <p>
+            <br>https://www.wedrivechange.org/<br>
+            Logo & Photos: UEMI
+        </p>
+    </div>
+        
+    <div class="navigation-wrapper">
+        <a href="index.html" class="back-btn">Back to Projects</a>
+        <a href="project2.html" class="next-btn">Next Project</a>
+    </div>
+
+
+    <footer>
+        <p>© 2025 Maria Giannisi</p>
+    </footer>
+
+    <script>
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()";
+        const scrambleElement = document.querySelector(".logo h1 a"); // fixed!
+        const targetText = scrambleElement.dataset.value;
+    
+        let interval = null;
+    
+        function scramble() {
+            let iteration = 0;
+    
+            clearInterval(interval);
+    
+            interval = setInterval(() => {
+                scrambleElement.innerText = targetText
+                    .split("")
+                    .map((letter, index) => {
+                        if (index < iteration) {
+                            return targetText[index];
+                        }
+                        return letters[Math.floor(Math.random() * letters.length)];
+                    })
+                    .join("");
+    
+                if (iteration >= targetText.length) { 
+                    clearInterval(interval);
+                    setTimeout(scramble, 3000); // Restart after 3 seconds pause
+                }
+    
+                iteration += 1 / 3;
+            }, 30);
+        }
+    
+        // Start scrambling on page load
+        window.onload = scramble;
+    </script>
+       
+
+</body>
+</html>
