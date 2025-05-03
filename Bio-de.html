@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio - Maria Giannisi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1 id="scramble">Maria Giannisi</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Bio.html">Bio</a></li>
+                    <li><a href="mailto:ma.gi@hotmail.co.uk">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <a href="Bio.html">EN</a> | <a href="Bio-de.html">DE</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="bio">
+        <div class="bio-content">
+            <div class="bio-image">
+                <img src="img/Me.JPG" alt="Maria Giannisi">
+            </div>
+            <div class="bio-description">
+                   <p>Zwischen Interface und Graphikdesign: </p>
+                   <p>Meine Schwerpunkte liegen auf Web-Design, Branding und Social Media.  </p>
+                <br><p><strong>Großstadtzoo Studio für Gestaltung</strong><br>Graphikdesignerin [2024 - aktuell]</p><br>
+                <p><strong>Urban Electric Mobility Initiative // Urban Living Lab Center</strong><br>Social Media Management & Graphikdesign [2023-2024]</p>
+                <br><p><strong>Reiner Lemoine Institut</strong><br>SHK Interface Design [2020-2021]</p></br>
+                <p><strong>Fachhochschule Potsdam</strong><br>Fachbereich Interface Design [2020-2024]</p>
+                <br><p><strong>Akelius Languages GmbH</strong><br>Content & Foto Editor [2019-2020]</p><br>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>© 2025 Maria Giannisi</p>
+    </footer>
+
+    <script>
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()";
+        const targetText = "Maria Giannisi";
+        const scrambleElement = document.getElementById("scramble");
+
+        let interval = null;
+
+        function scramble() {
+            let iteration = 0;
+
+            clearInterval(interval);
+
+            interval = setInterval(() => {
+                scrambleElement.innerText = scrambleElement.innerText
+                    .split("")
+                    .map((letter, index) => {
+                        if (index < iteration) {
+                            return targetText[index];
+                        }
+                        return letters[Math.floor(Math.random() * letters.length)];
+                    })
+                    .join("");
+
+                if (iteration >= targetText.length) { 
+                    clearInterval(interval);
+                    setTimeout(scramble, 3000); // Restart after 3 seconds pause
+                }
+
+                iteration += 1 / 3;
+            }, 30);
+        }
+
+        // Start scrambling on page load
+        window.onload = scramble;
+    </script>
+
+</body>
+</html>

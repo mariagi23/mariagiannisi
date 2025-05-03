@@ -1,9 +1,11 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body and Basic Layout */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #fff;
@@ -12,9 +14,9 @@ body {
     overflow-x: hidden;
 }
 
-/* Header layout */
+/* Header Layout */
 header {
-    padding: 20px 40px;
+    padding: 20px 20px;
 }
 
 .header-content {
@@ -22,6 +24,7 @@ header {
     align-items: center;
     gap: 20px;
     width: 100%;
+    flex-wrap: wrap; /* Allows the items to stack on smaller screens */
 }
 
 .logo {
@@ -60,9 +63,12 @@ nav ul li a {
 }
 
 .language-switcher {
-    margin-left: auto;
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .language-switcher a {
@@ -71,10 +77,10 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Projects grid for homepage */
+/* Projects Grid for Homepage */
 .projects {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column by default (mobile) */
     gap: 10px;
     padding: 0 10px;
 }
@@ -82,14 +88,15 @@ nav ul li a {
 .project {
     display: flex;
     justify-content: center;
-    height: 350px;
+    height: 350px; /* Uniform height for the project cards */
     overflow: hidden;
+    position: relative;
 }
 
 .project img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ensures the images fill the container without distortion */
     border-radius: 2px;
 }
 
@@ -107,11 +114,11 @@ footer {
     margin-top: 60px;
 }
 
-/* Project detail page */
+/* Project Detail Page */
 .project-details {
     max-width: 1200px;
-    margin: 0;
-    padding: 0 40px;
+    margin: 0 20px;
+    padding: 0 0px;
 }
 
 .project-info {
@@ -120,7 +127,7 @@ footer {
     align-items: flex-start;
     font-size: 0.9rem;
     margin: 15px 0 20px;
-    gap: 10px;
+   
 }
 
 .project-info > div {
@@ -138,18 +145,11 @@ footer {
     border-radius: 5px;
 }
 
-.full-media-wrapper {
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
 .full-image-wrapper {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
 }
-
 
 .full-image {
     width: 100%;
@@ -231,7 +231,7 @@ video {
     background-color: transparent;
 }
 
-/* Text content */
+/* Text Content */
 .project-paragraph,
 .credits {
     max-width: 800px;
@@ -243,16 +243,154 @@ video {
     color: #333;
 }
 
-/* Responsive for larger screens */
-@media (min-width: 768px) {
-    .projects {
-        grid-template-columns: 1fr 1fr;
+/* Bio Section */
+.bio {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 40px;
+    gap: 30px;
+    max-width: 100%;
+    margin-top: 20px;
+    flex-direction: column; /* Stack image and description vertically */
+    text-align: center; /* Align text in the center */
+}
+
+.bio-content {
+    display: flex;
+    flex-direction: column; /* Stack image and text */
+    align-items: center; /* Center both the image and text */
+    gap: 20px; /* Space between image and text */
+    margin-top: 0px;
+}
+
+.bio-image {
+    width: 300px; /* Fixed width for the image */
+    height: 300px;
+}
+
+.bio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1px; /* Optional: rounded corners */
+}
+
+.bio-description {
+    font-size: 16px;
+    color: #333;
+    max-width: 800px; /* Limit text width for readability */
+    line-height: 1.6;
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.bio-description p {
+    line-height: 1.8;
+    color: #000;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .bio-content {
+        flex-direction: column; /* Stack the image and text on mobile */
+        align-items: center;
+        text-align: center;
+    }
+
+    .bio-image {
+        margin-bottom: 20px; /* Space between image and text */
+    }
+
+    .bio-description {
+        max-width: 100%; /* Ensure description takes full width on mobile */
     }
 }
 
+
+
+/* Tablet Portrait and Larger */
+@media (min-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr); /* 2 projects per row on tablets */
+    }
+
+    .header-content {
+        justify-content: space-between; /* Ensure the logo and nav are spaced on larger screens */
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Keep language switcher beside the nav on larger screens */
+    .language-switcher {
+        order: 0;
+        margin-left: auto; /* Keep the language switcher aligned on the right side */
+    }
+}
+
+/* Desktop and Larger */
 @media (min-width: 1024px) {
     .projects {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr); /* 3 projects per row on desktops */
+    }
+}
+
+/* Mobile Landscape */
+@media (max-width: 767px) {
+    .projects {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+
+    .project {
+        height: auto; /* Allow flexible height on mobile */
+    }
+
+    /* Stack header content on mobile */
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start; /* Stack logo and nav on smaller screens */
+        gap: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack the navigation items vertically */
+        gap: 10px;
+    }
+
+    /* Move language switcher below the navigation and align to the left */
+    .language-switcher {
+        order: 1; /* Ensures language switcher comes below nav */
+        margin-top: 10px; /* Add some space */
+        width: 100%; /* Make language switcher take up the full width */
+        justify-content: flex-start; /* Align language switcher to the left */
+    }
+}
+
+
+/* Mobile View */
+@media (max-width: 480px) {
+    .project h3 {
+        font-size: 1rem; /* Adjust text size on smaller screens */
+    }
+}
+
+/* Project Info Stack for Mobile and Tablet */
+@media (max-width: 768px) {
+    .project-info {
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .project-info > div {
+        flex: none; /* Allow each div to take its natural height */
+        margin-bottom: 10px; /* Add spacing between stacked items */
     }
 }
 
