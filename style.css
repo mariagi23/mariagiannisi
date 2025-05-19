@@ -35,14 +35,14 @@ header {
 }
 
 .logo h1 {
-    font-family: 'AktivGrotesk';
+    font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
 }
 
 .logo a {
     text-decoration: none;
     color: inherit;
-    font-family: 'AktivGrotesk';
+    font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
 }
 
@@ -59,11 +59,11 @@ nav ul li a {
     color: #333;
     font-weight: bold;
     font-size: 16px;
-    font-family: 'AktivGrotesk';
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .language-switcher {
-    font-family: 'AktivGrotesk';
+    font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     margin-left: auto;
     display: flex;
