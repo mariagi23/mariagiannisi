@@ -59,11 +59,11 @@ nav ul li a {
     color: #333;
     font-weight: bold;
     font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'AktivGrotesk';
 }
 
 .language-switcher {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'AktivGrotesk';
     font-size: 16px;
     margin-left: auto;
     display: flex;
