@@ -212,6 +212,29 @@ video {
     cursor: pointer;
 }
 
+.media-pair {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    gap: 1rem;
+}
+
+.media-left,
+.media-right {
+    flex: 1; /* Each takes 50% */
+}
+
+.media-left video,
+.media-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px; 
+    object-fit: cover;
+}
+
+
 /* Navigation */
 .navigation-wrapper {
     display: flex;
