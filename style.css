@@ -215,7 +215,7 @@ video {
 .media-pair {
     display: grid;
     grid-template-columns: 460px 1fr; /* fixed width for left, flexible for right */
-    gap: 6rem;
+    gap: 15rem;
     max-width: 1000px;
     margin: 2rem 20px;
     align-items: stretch; /* vertically stretch to equal height */
