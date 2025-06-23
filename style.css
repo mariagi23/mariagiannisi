@@ -225,20 +225,19 @@ video {
 
 /* Fixed 300x300 crop box for the video */
 .media-left {
-    width: 500px;
     height: 500px;
     overflow: hidden;
     flex: none; /* Prevent flex from resizing this box */
 }
 
-/* Image container still takes 50% */
+
+.media-left,
 .media-right {
     flex: 1 1 48%;
+    height: 500px;
+    overflow: hidden;
 }
 
-.media-right {
-    height: 500px; /* Match video height */
-}
 
 
 .media-left video,
