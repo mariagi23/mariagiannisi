@@ -214,7 +214,7 @@ video {
 
 .media-pair {
     display: grid;
-    grid-template-columns: 40% 70%; 
+    grid-template-columns: 40% 60%; 
     gap: 2.5rem;
     margin: 4rem 20px;
     align-items: stretch;
