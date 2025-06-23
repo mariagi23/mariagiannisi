@@ -237,7 +237,7 @@ video {
     height: 500px;
     overflow: visible;
     min-width: 0;
-    
+    margin-left: 4rem;
 }
 
 /* Media fills container */
