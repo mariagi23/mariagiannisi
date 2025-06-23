@@ -233,7 +233,7 @@ video {
 .media-left,
 .media-right {
     flex: 1 1 45%;
-    height: 500px;
+    height: 600px;
     overflow: hidden;
 }
 
