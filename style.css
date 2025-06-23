@@ -225,8 +225,8 @@ video {
 
 /* Fixed 300x300 crop box for the video */
 .media-left {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     overflow: hidden;
     flex: none; /* Prevent flex from resizing this box */
 }
@@ -237,7 +237,7 @@ video {
 }
 
 .media-right {
-    height: 600px; /* Match video height */
+    height: 500px; /* Match video height */
 }
 
 
