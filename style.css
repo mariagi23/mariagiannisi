@@ -214,32 +214,32 @@ video {
 
 .media-pair {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Make sure items stay side-by-side */
     justify-content: space-between;
     align-items: stretch;
     max-width: 1000px;
     margin: 2rem auto;
-    gap: 1.5rem; /* Moderate space between items */
+    gap: 1.5rem; /* spacing between video and image */
     padding: 0;
 }
 
-/* Left side: cropped video box */
+/* Fixed-size, cropped video box */
 .media-left {
-    width: 460px;         /* Fixed crop width */
+    width: 460px;
     height: 500px;
     overflow: hidden;
-    flex-shrink: 0;       /* Don't allow shrinking */
+    flex-shrink: 0; /* Don't let it shrink */
 }
 
-/* Right side: expands to take remaining space */
+/* Expands to remaining space */
 .media-right {
-    flex-grow: 1;         /* Take up remaining space */
+    flex-grow: 1;
     height: 500px;
-    overflow: visible;    /* Allow full display */
-    min-width: 0;         /* Fix flexbox overflow issues */
+    overflow: visible;
+    min-width: 0; /* prevent overflow issue */
 }
 
-/* Media inside: fills container */
+/* Both media fill their container */
 .media-left video,
 .media-right img {
     width: 100%;
