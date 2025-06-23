@@ -219,7 +219,7 @@ video {
     align-items: stretch;
     max-width: 1000px;
     margin: 2rem 20px; /* keep vertical margin, but no side margin */
-    gap: 1rem; /* smaller gap for more width */
+    gap: 2.5rem; /* smaller gap for more width */
     padding: 0; /* no padding */
 }
 
