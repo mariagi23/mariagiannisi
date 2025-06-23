@@ -219,20 +219,13 @@ video {
     align-items: center;
     max-width: 1000px;
     margin: 2rem auto;
-    gap: 2.2rem;
-    padding: 0 0;
+    gap: 2rem; /* 2rem = ~32px */
+    padding: 0;
 }
-
-.media-left {
-    height: 500px;
-    overflow: hidden;
-    flex: none; /* Prevent flex from resizing this box */
-}
-
 
 .media-left,
 .media-right {
-    flex: 1 1 40%;
+    flex: 1 1 45%;
     height: 500px;
     overflow: hidden;
 }
@@ -244,6 +237,14 @@ video {
     object-fit: cover;
     display: block;
     border-radius: 8px;
+}
+
+.media-left {
+    width: 480px;
+}
+
+.media-right {
+    width: 480px;
 }
 
 
