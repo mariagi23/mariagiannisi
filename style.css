@@ -219,7 +219,7 @@ video {
     align-items: center;
     max-width: 1000px;
     margin: 2rem 50px;
-    gap: 2rem; /* 2rem = ~32px */
+    gap: 2.5rem; 
     padding: 0;
 }
 
