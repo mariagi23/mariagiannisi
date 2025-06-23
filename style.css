@@ -223,7 +223,6 @@ video {
     padding: 0 1rem;
 }
 
-/* Fixed 300x300 crop box for the video */
 .media-left {
     height: 500px;
     overflow: hidden;
@@ -233,7 +232,7 @@ video {
 
 .media-left,
 .media-right {
-    flex: 1 1 48%;
+    flex: 1 1 45%;
     height: 500px;
     overflow: hidden;
 }
