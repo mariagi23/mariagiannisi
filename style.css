@@ -218,9 +218,9 @@ video {
     justify-content: space-between;
     align-items: stretch;
     max-width: 1000px;
-    margin: 2rem 20px; /* keep vertical margin, but no side margin */
-    gap: 2.5rem; /* smaller gap for more width */
-    padding: 0; /* no padding */
+    margin: 2rem 20px; 
+    gap: 2.5rem; 
+    padding: 0; 
 }
 
 /* Fixed width video container with cropping */
