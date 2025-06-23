@@ -236,6 +236,11 @@ video {
     flex: 1 1 48%;
 }
 
+.media-right {
+    height: 600px; /* Match video height */
+}
+
+
 .media-left video,
 .media-right img {
     width: 100%;
