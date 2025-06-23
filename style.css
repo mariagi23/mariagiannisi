@@ -214,15 +214,18 @@ video {
 
 .media-pair {
     display: flex;
-    width: 100%;
-    max-width: 1200px;
+    flex-wrap: wrap; /* Allows stacking on small screens */
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;  /* Optional: limit max width */
     margin: 2rem auto;
     gap: 1rem;
+    padding: 0 1rem;
 }
 
 .media-left,
 .media-right {
-    flex: 1; /* Each takes 50% */
+    flex: 1 1 48%; /* Take about 50% each with small gap */
 }
 
 .media-left video,
@@ -230,8 +233,8 @@ video {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 5px; 
     object-fit: cover;
+    border-radius: 8px;
 }
 
 
