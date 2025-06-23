@@ -215,21 +215,31 @@ video {
 .media-pair {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
     max-width: 1000px;
-    margin: 2rem 50px;
-    gap: 2.5rem; 
+    margin: 2rem auto;
+    gap: 1.5rem; /* Moderate space between items */
     padding: 0;
 }
 
-.media-left,
-.media-right {
-    flex: 1 1 45%;
+/* Left side: cropped video box */
+.media-left {
+    width: 460px;         /* Fixed crop width */
     height: 500px;
     overflow: hidden;
+    flex-shrink: 0;       /* Don't allow shrinking */
 }
 
+/* Right side: expands to take remaining space */
+.media-right {
+    flex-grow: 1;         /* Take up remaining space */
+    height: 500px;
+    overflow: visible;    /* Allow full display */
+    min-width: 0;         /* Fix flexbox overflow issues */
+}
+
+/* Media inside: fills container */
 .media-left video,
 .media-right img {
     width: 100%;
@@ -238,15 +248,6 @@ video {
     display: block;
     border-radius: 8px;
 }
-
-.media-left {
-    width: 480px;
-}
-
-.media-right {
-    width: 480px;
-}
-
 
 /* Navigation */
 .navigation-wrapper {
