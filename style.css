@@ -218,7 +218,7 @@ video {
     justify-content: space-between;
     align-items: stretch;
     max-width: 1000px;
-    margin: 2rem auto; /* keep vertical margin, but no side margin */
+    margin: 2rem 20px; /* keep vertical margin, but no side margin */
     gap: 1rem; /* smaller gap for more width */
     padding: 0; /* no padding */
 }
@@ -248,7 +248,6 @@ video {
     display: block;
     border-radius: 8px;
 }
-
 
 /* Navigation */
 .navigation-wrapper {
