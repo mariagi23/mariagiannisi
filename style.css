@@ -231,10 +231,17 @@ video {
 .media-left video,
 .media-right img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
     border-radius: 8px;
+    display: block;
+}
+
+.media-left {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
 }
 
 
