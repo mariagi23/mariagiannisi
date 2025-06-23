@@ -214,13 +214,13 @@ video {
 
 .media-pair {
     display: grid;
-    grid-template-columns: 460px 1fr; /* fixed width for left, flexible for right */
-    gap: 1rem;
-    max-width: 1000px;
-    margin: 2rem 20px;
-    align-items: stretch; /* vertically stretch to equal height */
+    grid-template-columns: 460px 1.2fr; /* give right side more room */
+    gap: 2rem;
+    max-width: 1200px; /* increase overall space */
+    margin: 2rem auto;
+    align-items: stretch;
     height: 500px;
-  }
+  }  
   
   .media-left {
     overflow: hidden;
