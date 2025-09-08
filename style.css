@@ -171,6 +171,21 @@ footer {
     margin: 0 auto;
 }
 
+.poster-wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    width: 100%;
+  }
+  
+  .poster {
+    max-height: 680px;        /* limit height */
+    width: auto;              /* keep proportions */
+    height: auto;             /* responsive */
+    display: block;
+  }
+  
+
 /* VIDEO section */
 .video-container {
     width: 100%;
