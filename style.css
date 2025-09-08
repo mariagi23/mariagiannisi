@@ -180,9 +180,9 @@ footer {
   
   .poster {
     max-height: 680px;        /* limit height */
-    width: auto;              /* keep proportions */
-    height: auto;             /* responsive */
-    display: block;
+    max-width: 60%;      /* prevents full width */
+    height: auto;        /* keep proportions */
+    width: auto; 
   }
   
 
