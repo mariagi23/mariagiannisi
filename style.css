@@ -128,9 +128,9 @@ nav ul li a {
     bottom: 0;
     left: 0;
     width: 100%;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: left;
-    padding: 10px 0;
+    padding: 10px 10px;
     opacity: 0; /* hidden by default */
     transition: opacity 0.3s ease;
     font-family: 'AktivGrotesk', sans-serif;
