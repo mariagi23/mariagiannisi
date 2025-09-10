@@ -100,6 +100,54 @@ nav ul li a {
     border-radius: 2px;
 }
 
+.projects {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default (mobile) */
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    height: 350px; /* Uniform height for the project cards */
+    overflow: hidden;
+    position: relative; /* needed for overlay positioning */
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the images fill the container without distortion */
+    border-radius: 2px;
+    transition: transform 0.3s ease; /* for hover zoom */
+}
+
+.project-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0; /* hidden by default */
+    transition: opacity 0.3s ease;
+    font-family: 'AktivGrotesk', sans-serif;
+    font-size: 1.2rem;
+    border-radius: 0 0 2px 2px; /* match the image corners */
+}
+
+.project:hover img {
+    transform: scale(1.05); /* slight zoom effect */
+}
+
+.project:hover .project-name {
+    opacity: 1; /* show overlay on hover */
+}
+
+
 .project h3 {
     margin-top: 10px;
     font-size: 1.2rem;
