@@ -128,14 +128,13 @@ nav ul li a {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 10px 0;
     opacity: 0; /* hidden by default */
     transition: opacity 0.3s ease;
     font-family: 'AktivGrotesk', sans-serif;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     border-radius: 0 0 2px 2px; /* match the image corners */
 }
 
