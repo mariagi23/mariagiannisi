@@ -196,14 +196,17 @@ footer {
 .full-image-wrapper {
     width: 80%;
     padding: 0 20px;
+    margin: 0 auto;
     box-sizing: border-box;
+    
 }
 
 .full-image {
-    width: 100%;
+    width: 80%;
     height: auto;
+    display: block;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
 }
 
 .reduced-image {
