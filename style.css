@@ -108,7 +108,6 @@ nav ul li a {
     height: 350px;
     object-fit: cover;
     border-radius: 2px;
-    transition: transform 0.3s ease;
 }
 
 /* Project name UNDER the image */
@@ -123,11 +122,6 @@ nav ul li a {
     font-family: 'AktivGrotesk', sans-serif;
     font-size: 0.75rem;
     line-height: 1.2;
-}
-
-/* Image zoom on hover */
-.project:hover img {
-    transform: scale(1.05);
 }
 
 /* Make sure the project name does NOT behave like an overlay */
