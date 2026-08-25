@@ -128,7 +128,22 @@ nav ul li a {
     bottom: 0;
     left: 0;
     width: 100%;
-    color: rgb(52, 52, 52);
+    color: rgb(254, 254, 254)
+    text-align: left;
+    padding: 10px 10px;
+    opacity: 0; /* hidden by default */
+    transition: opacity 0.3s ease;
+    font-family: 'AktivGrotesk', sans-serif;
+    font-size: 0.9rem;
+    border-radius: 0 0 2px 2px; /* match the image corners */
+}
+
+.project-name-grzo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(42, 42, 42)
     text-align: left;
     padding: 10px 10px;
     opacity: 0; /* hidden by default */
