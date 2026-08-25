@@ -128,7 +128,7 @@ nav ul li a {
     bottom: 0;
     left: 0;
     width: 100%;
-    color: rgb(254, 254, 254)
+    color: rgb(54, 54, 54);
     text-align: left;
     padding: 10px 10px;
     opacity: 0; /* hidden by default */
