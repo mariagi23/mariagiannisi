@@ -124,29 +124,16 @@ nav ul li a {
 }
 
 .project-name {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: static;
     width: 100%;
     color: rgb(54, 54, 54);
     text-align: left;
-    padding: 10px 10px;
-    opacity: 0; /* hidden by default */
-    transition: opacity 0.3s ease;
+    padding: 8px 0 0 0;
+    opacity: 1;
     font-family: 'AktivGrotesk', sans-serif;
-    font-size: 0.9rem;
-    border-radius: 0 0 2px 2px; /* match the image corners */
+    font-size: 0.75rem;
+    line-height: 1.2;
 }
-
-
-.project:hover img {
-    transform: scale(1.05); /* slight zoom effect */
-}
-
-.project:hover .project-name {
-    opacity: 1; /* show overlay on hover */
-}
-
 
 .project h3 {
     margin-top: 10px;
