@@ -130,7 +130,9 @@ nav ul li a.contact::after {
     content: "↗";
     display: inline-block;
     margin-left: 8px;
-    font-size: 0.7em;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 0.8;
     transition: transform 0.25s ease;
 }
 
@@ -224,12 +226,12 @@ nav ul li a.contact:hover::after {
     display: block;
     width: 100%;
 
-    padding: 0 0 8px 0;
+    padding: 0 0 18px 0;
 
     color: rgb(54, 54, 54);
 
     font-family: 'AktivGrotesk', Arial, sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     font-weight: 400;
     line-height: 1.2;
 
