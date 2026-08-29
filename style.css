@@ -51,14 +51,10 @@ header {
 
 .header-content {
     width: 100%;
-
     display: grid;
     grid-template-columns: 1fr auto;
-
     align-items: center;
-
     padding-bottom: 30px;
-
     border-bottom: 1px solid #d9d9d9;
 }
 
@@ -74,26 +70,17 @@ header {
 
 .logo h1 {
     margin: 0;
-
     color: #111;
-
     font-family: 'AktivGrotesk', Arial, sans-serif;
-
     font-size: clamp(26px, 2.15vw, 40px);
     font-weight: 600;
-
     line-height: 1;
     letter-spacing: -0.045em;
 }
 
-
-/* Slash before name */
-
 .logo h1::before {
     content: "/";
-
     display: inline-block;
-
     margin-right: 9px;
 }
 
@@ -108,14 +95,10 @@ nav {
 
 nav ul {
     display: flex;
-
     align-items: center;
-
     gap: 48px;
-
     margin: 0;
     padding: 0;
-
     list-style: none;
 }
 
@@ -126,22 +109,14 @@ nav ul li {
 
 nav ul li a {
     display: inline-block;
-
     color: #111;
-
-    font-family: 'AktivGrotesk';
-
-    font-size: clamp(20px, 1.8vw, 32px);
-    font-weight: 400;
-
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+    font-size: clamp(14px, 1.1vw, 18px);
+    font-weight: 500;
     line-height: 1;
     letter-spacing: -0.04em;
-
     text-decoration: none;
-
-    transition:
-        opacity 0.25s ease,
-        transform 0.25s ease;
+    transition: opacity 0.25s ease;
 }
 
 nav ul li a:hover {
@@ -153,13 +128,9 @@ nav ul li a:hover {
 
 nav ul li a.contact::after {
     content: "↗";
-
     display: inline-block;
-
     margin-left: 8px;
-
     font-size: 0.7em;
-
     transition: transform 0.25s ease;
 }
 
@@ -174,11 +145,8 @@ nav ul li a.contact:hover::after {
 
 .intro {
     display: grid;
-
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-
     column-gap: 8vw;
-
     padding: 135px 4.5vw 145px;
 }
 
@@ -187,14 +155,10 @@ nav ul li a.contact:hover::after {
 
 .intro-label {
     color: #999;
-
     font-family: 'AktivGrotesk', Arial, sans-serif;
-
-    font-size: clamp(22px, 2vw, 34px);
+    font-size: clamp(14px, 1vw, 17px);
     font-weight: 400;
-
     line-height: 1;
-
     letter-spacing: -0.04em;
 }
 
@@ -207,16 +171,11 @@ nav ul li a.contact:hover::after {
 
 .intro-text p {
     margin: 0;
-
     color: #111;
-
     font-family: 'AktivGrotesk', Arial, sans-serif;
-
     font-size: clamp(34px, 3.05vw, 56px);
     font-weight: 400;
-
-    line-height: 1.02;
-
+    line-height: 1.2;
     letter-spacing: -0.048em;
 }
 
@@ -225,46 +184,31 @@ nav ul li a.contact:hover::after {
    PROJECTS GRID
    ========================================================= */
 
-   .projects {
+.projects {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 60px 32px;
+    column-gap: 30px;
+    row-gap: 55px;
     padding: 0 5vw;
 }
 
+
+/* =========================================================
+   PROJECT
+   ========================================================= */
+
 .project {
     display: block;
-
-    position: relative;
-
     width: 100%;
-    height: auto;
-
-    overflow: visible;
+    min-width: 0;
 }
 
 .project a {
     display: block;
-
     width: 100%;
-
+    min-width: 0;
     color: inherit;
-
     text-decoration: none;
-}
-
-.project img {
-    display: block;
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    object-position: center;
-}
-
-/* Subtle image hover */
-
-.project:hover img {
-    opacity: 0.92;
 }
 
 
@@ -272,38 +216,65 @@ nav ul li a.contact:hover::after {
    PROJECT NAME
    ========================================================= */
 
+/*
+   The title stays ABOVE the image.
+*/
+
 .project-name {
     display: block;
-
-    position: static;
-
     width: 100%;
 
-    padding: 8px 0 0;
+    padding: 0 0 8px 0;
 
     color: rgb(54, 54, 54);
 
-    text-align: left;
-
-    opacity: 1;
-
     font-family: 'AktivGrotesk', Arial, sans-serif;
-
     font-size: 0.75rem;
-
+    font-weight: 400;
     line-height: 1.2;
+
+    text-align: left;
 }
 
-.project:hover .project-name {
-    opacity: 1;
+
+/* =========================================================
+   PROJECT IMAGE CONTAINER
+   ========================================================= */
+
+/*
+   This is the important part.
+
+   Every project gets the exact same image area.
+   The rounded corners belong to the container,
+   NOT the actual <img>.
+*/
+
+.project-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
 }
 
-.project h3 {
-    margin-top: 10px;
 
-    font-size: 1.2rem;
+/* =========================================================
+   PROJECT IMAGE
+   ========================================================= */
 
-    text-align: center;
+   .project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* Hover */
+
+.project:hover .project-image img {
+    opacity: 0.92;
 }
 
 
@@ -313,7 +284,6 @@ nav ul li a.contact:hover::after {
 
 footer {
     padding: 20px;
-
     margin-top: 60px;
 
     color: #111;
@@ -321,7 +291,6 @@ footer {
     text-align: center;
 
     font-family: 'AktivGrotesk', Arial, sans-serif;
-
     font-size: 11px;
 }
 
@@ -332,15 +301,12 @@ footer {
 
 .project-details {
     max-width: 1200px;
-
     margin: 0 20px;
-
     padding: 0;
 }
 
 .project-info {
     display: flex;
-
     justify-content: space-between;
     align-items: flex-start;
 
@@ -355,29 +321,24 @@ footer {
 
 .small-image {
     width: 230px;
-
     margin-bottom: 20px;
 }
 
 .small-image img {
     width: 100%;
     height: auto;
-
     border-radius: 5px;
 }
 
 .full-image-wrapper {
     width: 100%;
-
     padding: 0 20px;
 }
 
 .full-image {
     display: block;
-
     width: 85%;
     height: auto;
-
     margin: 0 auto 20px;
 
     border-radius: 8px;
@@ -385,23 +346,18 @@ footer {
 
 .reduced-image {
     display: block;
-
     max-width: 75%;
-
     margin: 2rem auto;
 }
 
 .smaller-image {
     display: block;
-
     max-width: 40%;
-
     margin: 0 auto;
 }
 
 .poster-wrapper {
     display: flex;
-
     justify-content: center;
     align-items: center;
 
@@ -424,11 +380,9 @@ footer {
 .video-container {
     width: 100%;
     max-width: 100%;
-
     margin: 0 auto;
 
     border-radius: 8px;
-
     overflow: hidden;
 }
 
@@ -443,7 +397,6 @@ video {
 
 .video-controls {
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -470,7 +423,6 @@ video {
 
 #seekBar {
     flex: 1;
-
     cursor: pointer;
 }
 
@@ -539,12 +491,11 @@ video {
 
 
 /* =========================================================
-   NAVIGATION
+   PROJECT NAVIGATION
    ========================================================= */
 
 .navigation-wrapper {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 
@@ -564,7 +515,6 @@ video {
     background-color: transparent;
 
     font-family: 'Courier New', Courier, monospace;
-
     font-size: 1rem;
 
     text-decoration: none;
@@ -588,7 +538,6 @@ video {
     text-align: center;
 
     font-size: 0.9rem;
-
     line-height: 1.8;
 }
 
@@ -652,46 +601,40 @@ video {
     color: #333;
 
     font-size: 16px;
-
     line-height: 1.6;
 }
 
 .bio-description p {
     color: #000;
-
     line-height: 1.8;
 }
 
 
 /* =========================================================
-   TABLET
+   TABLET / DESKTOP
    ========================================================= */
 
 @media (min-width: 768px) {
 
     .projects {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 30px;
+        row-gap: 55px;
+
+        padding: 0 5vw;
+    }
+
+    .project-image {
+        height: 500px;
     }
 
     .bio-content {
         flex-direction: column;
-
         align-items: center;
     }
 }
 
-
-/* =========================================================
-   DESKTOP
-   ========================================================= */
-
-   @media (min-width: 768px) {
-    .projects {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px 30px;
-        padding: 0 40px;
-    }
-}
 
 /* =========================================================
    MOBILE
@@ -699,7 +642,9 @@ video {
 
 @media (max-width: 767px) {
 
-    /* Header */
+    /* -------------------------
+       Header
+    ------------------------- */
 
     header {
         padding: 22px 5vw 0;
@@ -726,7 +671,9 @@ video {
     }
 
 
-    /* Intro */
+    /* -------------------------
+       Intro
+    ------------------------- */
 
     .intro {
         grid-template-columns: 1fr;
@@ -737,7 +684,7 @@ video {
     }
 
     .intro-label {
-        font-size: 22px;
+        font-size: 14px;
     }
 
     .intro-text p {
@@ -747,37 +694,58 @@ video {
     }
 
 
-    /* Projects */
+    /* -------------------------
+       Projects
+    ------------------------- */
 
     .projects {
         grid-template-columns: 1fr;
 
-        gap: 25px;
+        column-gap: 0;
+        row-gap: 35px;
 
         padding: 0 5vw;
     }
 
-    .project {
-        height: auto;
 
-        overflow: visible;
-    }
-
-    .project img {
-        width: 100%;
-        height: auto;
-
-        object-fit: cover;
-    }
+    /* Title remains ABOVE image */
 
     .project-name {
-        padding: 8px 0 0;
+        padding: 0 0 8px 0;
 
         font-size: 0.75rem;
     }
 
 
-    /* Bio */
+    /*
+       Fixed image container.
+
+       DO NOT change this to height: auto.
+    */
+
+    .project-image {
+        width: 100%;
+
+        height: 400px;
+
+        overflow: hidden;
+
+        border-radius: 12px;
+    }
+
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        object-position: center;
+    }
+
+
+    /* -------------------------
+       Bio
+    ------------------------- */
 
     .bio-content {
         flex-direction: column;
@@ -796,7 +764,9 @@ video {
     }
 
 
-    /* Project info */
+    /* -------------------------
+       Project info
+    ------------------------- */
 
     .project-info {
         flex-direction: column;
@@ -834,5 +804,16 @@ video {
 
     .project h3 {
         font-size: 1rem;
+    }
+
+
+    /*
+       Smaller but STILL equal image boxes.
+    */
+
+    .project-image {
+        height: 320px;
+
+        border-radius: 12px;
     }
 }
