@@ -200,6 +200,7 @@ nav ul li a.contact:hover::after {
     column-gap: 30px;
     row-gap: 55px;
     padding: 0 5vw;
+    margin-bottom: 100px;
 }
 
 
@@ -292,18 +293,156 @@ nav ul li a.contact:hover::after {
    FOOTER
    ========================================================= */
 
-footer {
-    padding: 20px;
-    margin-top: 60px;
+   .site-footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
 
-    color: #111;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
-    text-align: center;
+    padding: 45px 5vw 30px;
+
+    column-gap: 6vw;
 
     font-family: 'AktivGrotesk', Arial, sans-serif;
-    font-size: 11px;
 }
 
+
+/* =========================================================
+   FOOTER COLUMNS
+   ========================================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* =========================================================
+   FOOTER HEADINGS
+   ========================================================= */
+
+.footer-heading {
+    margin-bottom: 16px;
+
+    color: #fff;
+
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+   ========================================================= */
+
+.footer-column a {
+    display: inline-block;
+
+    margin-bottom: 9px;
+
+    color: #fff;
+
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+
+    text-decoration: none;
+
+    transition: opacity 0.25s ease;
+}
+
+.footer-column a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   FOOTER ARROW
+   ========================================================= */
+
+.footer-arrow {
+    display: inline-block;
+
+    margin-left: 5px;
+
+    font-size: 0.8em;
+    line-height: 1;
+
+    transition: transform 0.25s ease;
+}
+
+.footer-column a:hover .footer-arrow {
+    transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.footer-credit {
+    justify-self: end;
+    width: 60%;
+}
+
+.footer-credit .footer-heading {
+    margin-bottom: 16px;
+}
+
+.copyright {
+    color: #fff;
+
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .site-footer {
+        grid-template-columns: 1fr;
+
+        row-gap: 30px;
+
+        padding: 35px 5vw 30px;
+    }
+
+    .footer-credit {
+        justify-self: start;
+    }
+
+    .footer-heading {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .footer-column a,
+    .copyright {
+        font-size: 13px;
+    }
+
+    .footer-column a {
+        margin-bottom: 7px;
+    }
+}
 
 /* =========================================================
    PROJECT DETAIL PAGE
