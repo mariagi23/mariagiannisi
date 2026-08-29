@@ -127,13 +127,21 @@ nav ul li a:hover {
 /* Contact arrow */
 
 nav ul li a.contact::after {
-    content: "↗";
+    content: "";
     display: inline-block;
-    margin-left: 8px;
-    font-size: 1em;
-    font-weight: 500;
-    line-height: 0.8;
+    width: 12px;
+    height: 12px;
+    margin-left: 6px;
+    background-image: url("img/Arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
     transition: transform 0.25s ease;
+}
+
+nav ul li a.contact:hover::after {
+    transform: translate(3px, -3px);
 }
 
 nav ul li a.contact:hover::after {
