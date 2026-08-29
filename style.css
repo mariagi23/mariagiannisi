@@ -21,6 +21,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'AktivGrotesk';
+    src: url('font/AktivGroteskCorp-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 /* =========================================================
    BODY
@@ -72,7 +80,7 @@ header {
     margin: 0;
     color: #111;
     font-family: 'AktivGrotesk', Arial, sans-serif;
-    font-size: clamp(26px, 2.15vw, 40px);
+    font-size: clamp(20px, 1.5vw, 28px);
     font-weight: 600;
     line-height: 1;
     letter-spacing: -0.045em;
@@ -131,7 +139,8 @@ nav ul li a.contact::after {
     display: inline-block;
     width: 12px;
     height: 12px;
-    margin-left: 6px;
+    margin-left: 3px;
+    margin-bottom: 3px;
     background-image: url("img/Arrow.png");
     background-size: contain;
     background-repeat: no-repeat;
