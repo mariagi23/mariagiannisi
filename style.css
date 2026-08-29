@@ -129,7 +129,7 @@ nav ul li a {
 
     color: #111;
 
-    font-family: 'AktivGrotesk', Arial, sans-serif;
+    font-family: 'AktivGrotesk';
 
     font-size: clamp(20px, 1.8vw, 32px);
     font-weight: 400;
@@ -158,7 +158,7 @@ nav ul li a.contact::after {
 
     margin-left: 8px;
 
-    font-size: 0.9em;
+    font-size: 0.7em;
 
     transition: transform 0.25s ease;
 }
