@@ -352,180 +352,6 @@ nav ul li a.contact:hover::after {
 
 
 /* =========================================================
-   FOOTER
-   ========================================================= */
-
-.site-footer {
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 6vw;
-
-    padding: 45px 5vw 28px;
-
-    background: #000;
-    color: #fff;
-
-    font-family: 'AktivGrotesk', Arial, sans-serif;
-}
-
-
-/* =========================================================
-   FOOTER COLUMNS
-   ========================================================= */
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.footer-column:first-child {
-    transform: translateX(-5px);
-}
-
-
-/* =========================================================
-   FOOTER HEADINGS
-   ========================================================= */
-
-.footer-heading {
-    margin: 0 0 14px 0;
-
-    color: #fff;
-
-    font-family: 'AktivGrotesk', Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-
-    line-height: 1.2;
-    letter-spacing: -0.025em;
-}
-
-
-/* =========================================================
-   FOOTER LINKS
-   ========================================================= */
-
-.footer-column a {
-    display: block;
-
-    margin: 0 0 7px 0;
-
-    color: #fff;
-
-    font-family: 'AktivGrotesk', Arial, sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-
-    text-decoration: none;
-
-    transition: opacity 0.25s ease;
-}
-
-.footer-column a:hover {
-    opacity: 0.5;
-}
-
-
-/* =========================================================
-   SOCIAL
-   ========================================================= */
-
-.focus-social {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    margin: 0;
-    padding: 0;
-}
-
-.focus-social .footer-heading {
-    margin-bottom: 14px;
-}
-
-.focus-social a {
-    display: block;
-
-    margin: 0 0 7px 0;
-
-    color: #fff;
-
-    font-family: 'AktivGrotesk', Arial, sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-
-    text-decoration: none;
-
-    transition: opacity 0.25s ease;
-}
-
-.focus-social a:hover {
-    opacity: 0.5;
-}
-
-
-/* =========================================================
-   FOOTER ARROW
-   ========================================================= */
-
-.footer-arrow {
-    display: inline-block;
-
-    width: 8px;
-    height: 8px;
-
-    margin-left: 5px;
-
-    vertical-align: middle;
-
-    object-fit: contain;
-
-    filter: brightness(0) invert(1);
-
-    transition: transform 0.25s ease;
-}
-
-.focus-social a:hover .footer-arrow {
-    transform: translate(2px, -2px);
-}
-
-
-/* =========================================================
-   DESIGN & DEVELOPMENT
-   ========================================================= */
-
-.footer-credit {
-    justify-self: end;
-    width: 45%;
-}
-
-
-/* =========================================================
-   COPYRIGHT
-   ========================================================= */
-
-.copyright {
-    color: #fff;
-
-    font-family: 'AktivGrotesk', Arial, sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-}
-
-
-/* =========================================================
    PROJECT DETAIL PAGE
    ========================================================= */
 
@@ -993,13 +819,11 @@ video {
     }
 
     .project-image img {
-        display: block;
-
-        width: 100%;
-        height: 100%;
-
-        object-fit: contain;
-        object-position: center;
+     display: block;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: center;
 
         border-radius: 12px;
     }
@@ -1041,15 +865,252 @@ video {
     .focus-title {
         font-size: 18px;
     }
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+   .site-footer {
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    padding: 45px 5vw 28px;
+
+    background: #000;
+    color: #fff;
+
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+}
 
 
-    /* -------------------------
-       FOOTER
-    ------------------------- */
+/* =========================================================
+   FOOTER COLUMNS
+   ========================================================= */
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   CONTENT — LEFT COLUMN
+   ========================================================= */
+
+.site-footer > .footer-column:first-child {
+    grid-column: 1;
+    justify-self: start;
+
+    transform: translateX(-5px);
+}
+
+
+/* =========================================================
+   SOCIAL — MIDDLE COLUMN
+   ========================================================= */
+
+/*
+   THIS is the Social column.
+
+   It stays in grid column 2,
+   but its CONTENT is pushed toward the RIGHT
+   side of that middle area.
+*/
+
+.site-footer > .footer-social {
+    grid-column: 2;
+
+    justify-self: start;
+
+    position: relative;
+
+    left: 15vw;
+
+    width: max-content;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   FOOTER HEADINGS
+   ========================================================= */
+
+.footer-heading {
+    margin: 0 0 14px 0;
+
+    color: #fff;
+
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+   ========================================================= */
+
+.footer-column a {
+    display: block;
+
+    margin: 0 0 7px 0;
+
+    color: #fff;
+
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+
+    text-decoration: none;
+
+    transition: opacity 0.25s ease;
+}
+
+.footer-column a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin: 0;
+    padding: 0;
+}
+
+.footer-social .footer-heading {
+    margin: 0 0 14px 0;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS WRAPPER
+   ========================================================= */
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
+.footer-social .social-links a {
+    display: block;
+
+    margin: 0 0 7px 0;
+
+    color: #fff;
+
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+
+    text-decoration: none;
+
+    transition: opacity 0.25s ease;
+}
+
+.footer-social .social-links a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   FOOTER ARROW
+   ========================================================= */
+
+.footer-arrow {
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    margin-left: 5px;
+
+    vertical-align: middle;
+    object-fit: contain;
+
+    filter: brightness(0) invert(1);
+
+    transition: transform 0.25s ease;
+}
+
+.footer-social a:hover .footer-arrow {
+    transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   DESIGN & DEVELOPMENT — RIGHT COLUMN
+   ========================================================= */
+
+.footer-credit {
+    grid-column: 3;
+
+    justify-self: end;
+
+    width: 45%;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.copyright {
+    color: #fff;
+
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+
+/* =========================================================
+   MOBILE FOOTER
+   ========================================================= */
+
+@media (max-width: 767px) {
 
     .site-footer {
         display: flex;
-
         flex-direction: column;
 
         gap: 0;
@@ -1058,14 +1119,18 @@ video {
     }
 
 
-    /* Content column */
+    /* -------------------------
+       CONTENT / LEGAL NOTICE
+       ------------------------- */
 
     .site-footer > .footer-column:first-child {
         display: flex;
-
         flex-direction: column;
-
         align-items: flex-start;
+
+        width: 100%;
+
+        grid-column: auto;
 
         transform: none;
 
@@ -1079,40 +1144,50 @@ video {
     }
 
 
-    /* Social sits directly underneath
-       the Content / Legal Notice section */
+    /* -------------------------
+       SOCIAL
+       ------------------------- */
 
-    .focus-social {
+    .site-footer > .footer-social {
         display: flex;
-
         flex-direction: column;
-
         align-items: flex-start;
 
+        grid-column: auto;
+
+        width: 100%;
+
         margin: 22px 0 0 0;
-
         padding: 0;
+
+        /* Reset desktop positioning */
+        position: static;
+        left: auto;
+
+        transform: none;
+
+        justify-self: auto;
     }
 
-    .focus-social .footer-heading {
-        margin-bottom: 12px;
+    .footer-social .footer-heading {
+        margin: 0 0 12px 0;
     }
 
-    .focus-social a {
-        display: block;
-
+    .footer-social .social-links a {
         margin: 0 0 6px 0;
     }
 
 
-    /* Design & Development */
+    /* -------------------------
+       DESIGN & DEVELOPMENT
+       ------------------------- */
 
     .footer-credit {
         display: flex;
-
         flex-direction: column;
-
         align-items: flex-start;
+
+        grid-column: auto;
 
         justify-self: auto;
 
@@ -1126,93 +1201,18 @@ video {
     }
 
 
-    /* Footer typography */
+    /* -------------------------
+       MOBILE TYPOGRAPHY
+       ------------------------- */
 
     .footer-heading {
         font-size: 12px;
-
         margin-bottom: 12px;
     }
 
     .footer-column a,
-    .focus-social a,
+    .footer-social .social-links a,
     .copyright {
         font-size: 11px;
-    }
-
-
-    /* -------------------------
-       BIO
-    ------------------------- */
-
-    .bio-content {
-        flex-direction: column;
-
-        align-items: center;
-
-        text-align: center;
-    }
-
-    .bio-image {
-        margin-bottom: 20px;
-    }
-
-    .bio-description {
-        max-width: 100%;
-    }
-
-
-    /* -------------------------
-       PROJECT INFO
-    ------------------------- */
-
-    .project-info {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-    .project-info > div {
-        flex: none;
-
-        margin-bottom: 10px;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    .logo h1 {
-        font-size: 24px;
-    }
-
-    .intro {
-        padding-top: 65px;
-    }
-
-    .intro-text {
-        margin-left: 0;
-    }
-
-    .intro-text p {
-        font-size: 31px;
-        letter-spacing: -0.045em;
-    }
-
-    .project h3 {
-        font-size: 1rem;
-    }
-
-    .project-name {
-        padding-bottom: 6px;
-    }
-
-    .project-image {
-        aspect-ratio: 3 / 2;
-        border-radius: 12px;
     }
 }
