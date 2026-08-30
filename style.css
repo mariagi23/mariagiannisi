@@ -185,7 +185,8 @@ nav ul li a.contact:hover::after {
 /* Intro text */
 
 .intro-text {
-    max-width: 850px;
+    max-width: 700px;
+    margin-left: 50px;
 }
 
 .intro-text p {
@@ -297,6 +298,129 @@ nav ul li a.contact:hover::after {
     opacity: 0.92;
 }
 
+/* =========================================================
+   KEY AREAS OF FOCUS
+   ========================================================= */
+
+   .focus-section {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+
+    column-gap: 7vw;
+
+    padding: 40px 5vw 100px;
+
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+}
+
+
+/* =========================================================
+   FOCUS LABEL
+   ========================================================= */
+
+.focus-label {
+    color: #111;
+
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   FOCUS LIST
+   ========================================================= */
+
+.focus-list {
+    width: 100%;
+    margin-left: 8vw;
+}
+
+
+/* =========================================================
+   FOCUS ITEM
+   ========================================================= */
+
+.focus-item {
+    display: grid;
+    grid-template-columns: 68px 1fr;
+
+    align-items: center;
+
+    min-height: 80px;
+
+    border-top: 1px solid #d9d9d9;
+}
+
+.focus-item:last-child {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.focus-number {
+    color: #999;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.focus-title {
+    color: #111;
+
+    font-size: 21px;
+    font-weight: 500;
+
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .focus-section {
+        grid-template-columns: 1fr;
+
+        row-gap: 45px;
+
+        padding: 70px 5vw 80px;
+    }
+
+    .focus-label {
+        font-size: 15px;
+    }
+
+    .focus-item {
+        grid-template-columns: 50px 1fr;
+        min-height: 65px;
+    }
+
+    .focus-number {
+        font-size: 15px;
+    }
+
+    .focus-title {
+        font-size: 18px;
+    }
+}
 
 /* =========================================================
    FOOTER
@@ -310,7 +434,7 @@ nav ul li a.contact:hover::after {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    padding: 45px 5vw 30px;
+    padding: 45px 5vw 28px;
 
     column-gap: 6vw;
 
@@ -334,12 +458,12 @@ nav ul li a.contact:hover::after {
    ========================================================= */
 
 .footer-heading {
-    margin-bottom: 16px;
+    margin: 0 0 14px 0;
 
     color: #fff;
 
     font-family: 'AktivGrotesk', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
 
     line-height: 1.2;
@@ -352,18 +476,18 @@ nav ul li a.contact:hover::after {
    ========================================================= */
 
 .footer-column a {
-    display: inline-block;
+    display: block;
 
-    margin-bottom: 9px;
+    margin: 0 0 7px 0;
 
     color: #fff;
 
     font-family: 'AktivGrotesk', Arial, sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
 
     line-height: 1.2;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
 
     text-decoration: none;
 
@@ -376,13 +500,39 @@ nav ul li a.contact:hover::after {
 
 
 /* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.footer-social {
+    padding-left: 0;
+    margin-left: 200px;
+}
+
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.social-links a {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: #fff;
+}
+
+
+/* =========================================================
    FOOTER ARROW
    ========================================================= */
 
 .footer-arrow {
     display: inline-block;
 
-    margin-left: 5px;
+    margin-left: 4px;
 
     font-size: 0.8em;
     line-height: 1;
@@ -390,8 +540,18 @@ nav ul li a.contact:hover::after {
     transition: transform 0.25s ease;
 }
 
-.footer-column a:hover .footer-arrow {
+.social-links a:hover .footer-arrow {
     transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   DESIGN & DEVELOPMENT
+   ========================================================= */
+
+.footer-credit {
+    justify-self: end;
+    width: 45%;
 }
 
 
@@ -399,24 +559,15 @@ nav ul li a.contact:hover::after {
    COPYRIGHT
    ========================================================= */
 
-.footer-credit {
-    justify-self: end;
-    width: 60%;
-}
-
-.footer-credit .footer-heading {
-    margin-bottom: 16px;
-}
-
 .copyright {
     color: #fff;
 
     font-family: 'AktivGrotesk', Arial, sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
 
     line-height: 1.2;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
 }
 
 
@@ -429,27 +580,28 @@ nav ul li a.contact:hover::after {
     .site-footer {
         grid-template-columns: 1fr;
 
-        row-gap: 30px;
+        row-gap: 28px;
 
-        padding: 35px 5vw 30px;
+        padding: 35px 5vw 25px;
     }
 
     .footer-credit {
         justify-self: start;
+        width: 100%;
     }
 
     .footer-heading {
-        font-size: 13px;
+        font-size: 12px;
         margin-bottom: 12px;
     }
 
     .footer-column a,
     .copyright {
-        font-size: 13px;
+        font-size: 11px;
     }
 
     .footer-column a {
-        margin-bottom: 7px;
+        margin-bottom: 6px;
     }
 }
 
