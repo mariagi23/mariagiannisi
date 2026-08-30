@@ -81,7 +81,7 @@ header {
     color: #111;
     font-family: 'AktivGrotesk', Arial, sans-serif;
     font-size: clamp(20px, 1.5vw, 28px);
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1;
     letter-spacing: -0.045em;
 }
@@ -132,7 +132,9 @@ nav ul li a:hover {
 }
 
 
-/* Contact arrow */
+/* =========================================================
+   CONTACT ARROW
+   ========================================================= */
 
 nav ul li a.contact::after {
     content: "";
@@ -155,7 +157,7 @@ nav ul li a.contact:hover::after {
 
 
 /* =========================================================
-   INTRO SECTION
+   INTRO
    ========================================================= */
 
 .intro {
@@ -197,7 +199,7 @@ nav ul li a.contact:hover::after {
 
 
 /* =========================================================
-   PROJECTS GRID
+   PROJECTS
    ========================================================= */
 
 .projects {
@@ -233,10 +235,6 @@ nav ul li a.contact:hover::after {
    PROJECT NAME
    ========================================================= */
 
-/*
-   The title stays ABOVE the image.
-*/
-
 .project-name {
     display: block;
     width: 100%;
@@ -254,13 +252,8 @@ nav ul li a.contact:hover::after {
 
 
 /* =========================================================
-   PROJECT IMAGE CONTAINER
+   PROJECT IMAGE
    ========================================================= */
-
-/*
-   Every project gets the exact same image area.
-   The rounded corners belong to the container.
-*/
 
 .project-image {
     width: 100%;
@@ -270,21 +263,14 @@ nav ul li a.contact:hover::after {
     background: #fff;
 }
 
-
-/* =========================================================
-   PROJECT IMAGE
-   ========================================================= */
-
 .project-image img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     border-radius: 12px;
 }
-
-
-/* Hover */
 
 .project:hover .project-image img {
     opacity: 0.92;
@@ -299,14 +285,14 @@ nav ul li a.contact:hover::after {
     display: grid;
     grid-template-columns: 0.75fr 1.25fr;
     column-gap: 7vw;
+
     padding: 40px 5vw 100px;
+
     font-family: 'AktivGrotesk', Arial, sans-serif;
 }
 
 
-/* =========================================================
-   FOCUS LABEL
-   ========================================================= */
+/* Focus label */
 
 .focus-label {
     color: #111;
@@ -318,9 +304,7 @@ nav ul li a.contact:hover::after {
 }
 
 
-/* =========================================================
-   FOCUS LIST
-   ========================================================= */
+/* Focus list */
 
 .focus-list {
     width: 100%;
@@ -328,15 +312,15 @@ nav ul li a.contact:hover::after {
 }
 
 
-/* =========================================================
-   FOCUS ITEM
-   ========================================================= */
+/* Focus item */
 
 .focus-item {
     display: grid;
     grid-template-columns: 68px 1fr;
     align-items: center;
+
     min-height: 80px;
+
     border-top: 1px solid #d9d9d9;
 }
 
@@ -345,9 +329,7 @@ nav ul li a.contact:hover::after {
 }
 
 
-/* =========================================================
-   NUMBER
-   ========================================================= */
+/* Focus number */
 
 .focus-number {
     color: #999;
@@ -358,9 +340,7 @@ nav ul li a.contact:hover::after {
 }
 
 
-/* =========================================================
-   TITLE
-   ========================================================= */
+/* Focus title */
 
 .focus-title {
     color: #111;
@@ -377,15 +357,15 @@ nav ul li a.contact:hover::after {
 
 .site-footer {
     width: 100%;
-    background: #000;
-    color: #fff;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 6vw;
 
     padding: 45px 5vw 28px;
 
-    column-gap: 6vw;
+    background: #000;
+    color: #fff;
 
     font-family: 'AktivGrotesk', Arial, sans-serif;
 }
@@ -456,21 +436,40 @@ nav ul li a.contact:hover::after {
    SOCIAL
    ========================================================= */
 
-.footer-social {
-    padding-left: 0;
-    margin-left: 200px;
-}
-
-.social-links {
+.focus-social {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    margin: 0;
+    padding: 0;
 }
 
-.social-links a {
-    display: inline-block;
-    margin-bottom: 7px;
+.focus-social .footer-heading {
+    margin-bottom: 14px;
+}
+
+.focus-social a {
+    display: block;
+
+    margin: 0 0 7px 0;
+
     color: #fff;
+
+    font-family: 'AktivGrotesk', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+
+    text-decoration: none;
+
+    transition: opacity 0.25s ease;
+}
+
+.focus-social a:hover {
+    opacity: 0.5;
 }
 
 
@@ -480,10 +479,14 @@ nav ul li a.contact:hover::after {
 
 .footer-arrow {
     display: inline-block;
+
     width: 8px;
     height: 8px;
+
     margin-left: 5px;
+
     vertical-align: middle;
+
     object-fit: contain;
 
     filter: brightness(0) invert(1);
@@ -491,7 +494,7 @@ nav ul li a.contact:hover::after {
     transition: transform 0.25s ease;
 }
 
-.social-links a:hover .footer-arrow {
+.focus-social a:hover .footer-arrow {
     transform: translate(2px, -2px);
 }
 
@@ -519,304 +522,6 @@ nav ul li a.contact:hover::after {
 
     line-height: 1.2;
     letter-spacing: -0.02em;
-}
-
-
-/* =========================================================
-   TABLET / DESKTOP
-   ========================================================= */
-
-@media (min-width: 768px) {
-
-    .projects {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 30px;
-        row-gap: 55px;
-        padding: 0 5vw;
-    }
-
-    .project-image {
-        height: 500px;
-    }
-
-    .bio-content {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 767px) {
-
-    /* -------------------------
-       Header
-       ------------------------- */
-
-    header {
-        padding: 22px 5vw 0;
-    }
-
-    .header-content {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding-bottom: 24px;
-    }
-
-    .logo h1 {
-        font-size: 26px;
-    }
-
-    nav ul {
-        gap: 25px;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-    }
-
-
-    /* -------------------------
-       Intro
-       ------------------------- */
-
-    .intro {
-        grid-template-columns: 1fr;
-        row-gap: 45px;
-        padding: 80px 5vw 90px;
-    }
-
-    .intro-label {
-        font-size: 14px;
-    }
-
-    /*
-       Removes the desktop offset so the
-       intro text aligns with / Maria Giannisi.
-    */
-
-    .intro-text {
-        margin-left: 0;
-    }
-
-    .intro-text p {
-        font-size: clamp(32px, 8vw, 48px);
-        line-height: 1.04;
-    }
-
-
-    /* -------------------------
-       Projects
-       ------------------------- */
-
-    .projects {
-        grid-template-columns: 1fr;
-        column-gap: 0;
-        row-gap: 35px;
-        padding: 0 5vw;
-    }
-
-
-    /* Title remains ABOVE image */
-
-    .project-name {
-        padding: 0 0 8px 0;
-        font-size: 0.75rem;
-    }
-
-
-    /*
-       Fixed image container.
-    */
-
-    .project-image {
-        width: 100%;
-        height: 400px;
-        overflow: hidden;
-        border-radius: 12px;
-    }
-
-    .project-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center;
-        border-radius: 12px;
-    }
-
-
-    /* -------------------------
-       Focus Section
-       ------------------------- */
-
-    .focus-section {
-        grid-template-columns: 1fr;
-        row-gap: 45px;
-        padding: 70px 5vw 80px;
-    }
-
-    .focus-label {
-        font-size: 15px;
-    }
-
-    .focus-list {
-        margin-left: 0;
-    }
-
-    .focus-item {
-        grid-template-columns: 50px 1fr;
-        min-height: 65px;
-    }
-
-    .focus-number {
-        font-size: 15px;
-    }
-
-    .focus-title {
-        font-size: 18px;
-    }
-
-
-    /* -------------------------
-       Bio
-       ------------------------- */
-
-    .bio-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .bio-image {
-        margin-bottom: 20px;
-    }
-
-    .bio-description {
-        max-width: 100%;
-    }
-
-
-    /* -------------------------
-       Project info
-       ------------------------- */
-
-    .project-info {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .project-info > div {
-        flex: none;
-        margin-bottom: 10px;
-    }
-
-
-    /* -------------------------
-       Footer
-       ------------------------- */
-
-    .site-footer {
-        grid-template-columns: 1fr;
-        row-gap: 28px;
-        padding: 35px 5vw 25px;
-    }
-
-    /*
-       Content column:
-       ABOUT
-       CONTACT
-       PRIVACY
-       LEGAL NOTICE
-    */
-
-    .footer-column:first-child {
-        transform: none;
-    }
-
-    /*
-       Social sits directly underneath
-       the Content column / Legal Notice.
-    */
-
-    .footer-social {
-        margin-left: 0;
-        padding-left: 0;
-        margin-top: 0;
-    }
-
-    .social-links {
-        align-items: flex-start;
-    }
-
-    /*
-       Design & Development sits below
-       the social section.
-    */
-
-    .footer-credit {
-        justify-self: start;
-        width: 100%;
-    }
-
-    .footer-heading {
-        font-size: 12px;
-        margin-bottom: 12px;
-    }
-
-    .footer-column a,
-    .copyright {
-        font-size: 11px;
-    }
-
-    .footer-column a {
-        margin-bottom: 6px;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    .logo h1 {
-        font-size: 24px;
-    }
-
-    .intro {
-        padding-top: 65px;
-    }
-
-    .intro-text {
-        margin-left: 0;
-    }
-
-    .intro-text p {
-        font-size: 31px;
-        letter-spacing: -0.045em;
-    }
-
-    .project h3 {
-        font-size: 1rem;
-    }
-
-
-    /*
-       Smaller but STILL equal image boxes.
-    */
-
-    .project-image {
-        height: 320px;
-        border-radius: 12px;
-    }
-
-    .project-image img {
-        border-radius: 12px;
-    }
 }
 
 
@@ -884,12 +589,14 @@ nav ul li a.contact:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 100%;
 }
 
 .poster {
     width: auto;
     height: auto;
+
     max-width: 60%;
     max-height: 680px;
 }
@@ -910,8 +617,10 @@ nav ul li a.contact:hover::after {
 
 video {
     display: block;
+
     width: 100%;
     height: auto;
+
     border-radius: 8px;
 }
 
@@ -935,7 +644,9 @@ video {
 #fullscreenBtn {
     background: none;
     border: none;
+
     font-size: 18px;
+
     cursor: pointer;
 }
 
@@ -951,42 +662,59 @@ video {
 
 .media-pair {
     display: grid;
+
     grid-template-columns: 40% 60%;
+
     gap: 2.5rem;
+
     height: 550px;
+
     margin: 4rem 20px;
+
     align-items: stretch;
 }
 
 .media-left {
     width: 100%;
     height: 100%;
+
     margin-right: 2rem;
+
     overflow: hidden;
+
     border-radius: 8px;
 }
 
 .media-left video {
     display: block;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     border-radius: 8px;
 }
 
 .media-right {
     width: 100%;
     height: 100%;
+
     max-width: 700px;
+
     margin-left: 2rem;
+
     overflow: hidden;
+
     border-radius: 8px;
 }
 
 .media-right img {
     display: block;
+
     width: 100%;
     height: 100%;
+
     object-fit: contain;
 }
 
@@ -1012,6 +740,7 @@ video {
     display: inline-block;
 
     color: #000;
+
     background-color: transparent;
 
     font-family: 'Courier New', Courier, monospace;
@@ -1111,34 +840,379 @@ video {
 
 
 /* =========================================================
-   FINAL MOBILE OVERRIDES
+   TABLET / DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 30px;
+        row-gap: 55px;
+        padding: 0 5vw;
+    }
+
+    .project-image {
+        height: 500px;
+    }
+
+    .bio-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
    ========================================================= */
 
 @media (max-width: 767px) {
 
-    /* Intro aligns with logo/header */
+    /* -------------------------
+       HEADER
+    ------------------------- */
+
+    header {
+        padding: 22px 5vw 0;
+    }
+
+    .header-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-bottom: 24px;
+    }
+
+    .logo h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+
+        width: 100%;
+    }
+
+    nav ul li {
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        display: inline-block;
+        font-size: 20px;
+    }
+
+
+    /* -------------------------
+       INTRO
+    ------------------------- */
+
+    .intro {
+        grid-template-columns: 1fr;
+
+        row-gap: 45px;
+
+        padding: 80px 5vw 90px;
+    }
+
+    .intro-label {
+        font-size: 14px;
+    }
+
+    .intro-text {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+
+    .intro-text p {
+        width: 100%;
+        font-size: clamp(32px, 8vw, 48px);
+        line-height: 1.04;
+    }
+
+
+    /* -------------------------
+       PROJECTS
+    ------------------------- */
+
+    .projects {
+        grid-template-columns: 1fr;
+
+        column-gap: 0;
+        row-gap: 35px;
+
+        padding: 0 5vw;
+
+        margin-bottom: 60px;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    /*
+       Keep title and image directly together.
+    */
+
+    .project-name {
+        width: 100%;
+        padding: 0 0 8px 0;
+
+        margin: 0;
+
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
+
+    /*
+       Image area keeps a consistent shape,
+       while the actual image is never cropped.
+    */
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+
+        aspect-ratio: 3 / 2;
+
+        overflow: hidden;
+
+        border-radius: 12px;
+        background: #fff;
+    }
+
+    .project-image img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        object-position: center;
+
+        border-radius: 12px;
+    }
+
+
+    /* -------------------------
+       KEY AREAS OF FOCUS
+    ------------------------- */
+
+    .focus-section {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        row-gap: 35px;
+
+        padding: 35px 5vw 70px;
+    }
+
+    .focus-label {
+        font-size: 15px;
+    }
+
+    .focus-list {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .focus-item {
+        grid-template-columns: 50px 1fr;
+
+        min-height: 65px;
+    }
+
+    .focus-number {
+        font-size: 15px;
+    }
+
+    .focus-title {
+        font-size: 18px;
+    }
+
+
+    /* -------------------------
+       FOOTER
+    ------------------------- */
+
+    .site-footer {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 35px 5vw 25px;
+    }
+
+
+    /* Content column */
+
+    .site-footer > .footer-column:first-child {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        transform: none;
+
+        margin: 0;
+    }
+
+    .site-footer > .footer-column:first-child a {
+        display: block;
+
+        margin: 0 0 6px 0;
+    }
+
+
+    /* Social sits directly underneath
+       the Content / Legal Notice section */
+
+    .focus-social {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin: 22px 0 0 0;
+
+        padding: 0;
+    }
+
+    .focus-social .footer-heading {
+        margin-bottom: 12px;
+    }
+
+    .focus-social a {
+        display: block;
+
+        margin: 0 0 6px 0;
+    }
+
+
+    /* Design & Development */
+
+    .footer-credit {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-self: auto;
+
+        width: 100%;
+
+        margin-top: 22px;
+    }
+
+    .footer-credit .footer-heading {
+        margin-bottom: 12px;
+    }
+
+
+    /* Footer typography */
+
+    .footer-heading {
+        font-size: 12px;
+
+        margin-bottom: 12px;
+    }
+
+    .footer-column a,
+    .focus-social a,
+    .copyright {
+        font-size: 11px;
+    }
+
+
+    /* -------------------------
+       BIO
+    ------------------------- */
+
+    .bio-content {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .bio-image {
+        margin-bottom: 20px;
+    }
+
+    .bio-description {
+        max-width: 100%;
+    }
+
+
+    /* -------------------------
+       PROJECT INFO
+    ------------------------- */
+
+    .project-info {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .project-info > div {
+        flex: none;
+
+        margin-bottom: 10px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .intro {
+        padding-top: 65px;
+    }
 
     .intro-text {
         margin-left: 0;
     }
 
-    /* Footer content stays on the left */
-
-    .footer-column:first-child {
-        transform: none;
+    .intro-text p {
+        font-size: 31px;
+        letter-spacing: -0.045em;
     }
 
-    /* Social aligns underneath Legal Notice */
-
-    .footer-social {
-        margin-left: 0;
-        padding-left: 0;
+    .project h3 {
+        font-size: 1rem;
     }
 
-    /* Design & Development */
+    .project-name {
+        padding-bottom: 6px;
+    }
 
-    .footer-credit {
-        justify-self: start;
-        width: 100%;
+    .project-image {
+        aspect-ratio: 3 / 2;
+        border-radius: 12px;
     }
 }
