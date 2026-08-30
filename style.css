@@ -153,10 +153,6 @@ nav ul li a.contact:hover::after {
     transform: translate(3px, -3px);
 }
 
-nav ul li a.contact:hover::after {
-    transform: translate(3px, -3px);
-}
-
 
 /* =========================================================
    INTRO SECTION
@@ -244,7 +240,6 @@ nav ul li a.contact:hover::after {
 .project-name {
     display: block;
     width: 100%;
-
     padding: 0 0 18px 0;
 
     color: rgb(54, 54, 54);
@@ -263,11 +258,8 @@ nav ul li a.contact:hover::after {
    ========================================================= */
 
 /*
-   This is the important part.
-
    Every project gets the exact same image area.
-   The rounded corners belong to the container,
-   NOT the actual <img>.
+   The rounded corners belong to the container.
 */
 
 .project-image {
@@ -283,7 +275,7 @@ nav ul li a.contact:hover::after {
    PROJECT IMAGE
    ========================================================= */
 
-   .project-image img {
+.project-image img {
     display: block;
     width: 100%;
     height: 100%;
@@ -298,18 +290,16 @@ nav ul li a.contact:hover::after {
     opacity: 0.92;
 }
 
+
 /* =========================================================
    KEY AREAS OF FOCUS
    ========================================================= */
 
-   .focus-section {
+.focus-section {
     display: grid;
     grid-template-columns: 0.75fr 1.25fr;
-
     column-gap: 7vw;
-
     padding: 40px 5vw 100px;
-
     font-family: 'AktivGrotesk', Arial, sans-serif;
 }
 
@@ -320,11 +310,9 @@ nav ul li a.contact:hover::after {
 
 .focus-label {
     color: #111;
-
     font-family: 'AktivGrotesk', Arial, sans-serif;
     font-size: 16px;
     font-weight: 500;
-
     line-height: 1.2;
     letter-spacing: -0.025em;
 }
@@ -347,11 +335,8 @@ nav ul li a.contact:hover::after {
 .focus-item {
     display: grid;
     grid-template-columns: 68px 1fr;
-
     align-items: center;
-
     min-height: 80px;
-
     border-top: 1px solid #d9d9d9;
 }
 
@@ -366,10 +351,8 @@ nav ul li a.contact:hover::after {
 
 .focus-number {
     color: #999;
-
     font-size: 18px;
     font-weight: 400;
-
     line-height: 1;
     letter-spacing: -0.03em;
 }
@@ -381,52 +364,18 @@ nav ul li a.contact:hover::after {
 
 .focus-title {
     color: #111;
-
     font-size: 21px;
     font-weight: 500;
-
     line-height: 1.1;
     letter-spacing: -0.04em;
 }
 
 
 /* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 767px) {
-
-    .focus-section {
-        grid-template-columns: 1fr;
-
-        row-gap: 45px;
-
-        padding: 70px 5vw 80px;
-    }
-
-    .focus-label {
-        font-size: 15px;
-    }
-
-    .focus-item {
-        grid-template-columns: 50px 1fr;
-        min-height: 65px;
-    }
-
-    .focus-number {
-        font-size: 15px;
-    }
-
-    .focus-title {
-        font-size: 18px;
-    }
-}
-
-/* =========================================================
    FOOTER
    ========================================================= */
 
-   .site-footer {
+.site-footer {
     width: 100%;
     background: #000;
     color: #fff;
@@ -512,19 +461,15 @@ nav ul li a.contact:hover::after {
     margin-left: 200px;
 }
 
-
 .social-links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-
 .social-links a {
     display: inline-block;
-
     margin-bottom: 7px;
-
     color: #fff;
 }
 
@@ -533,15 +478,17 @@ nav ul li a.contact:hover::after {
    FOOTER ARROW
    ========================================================= */
 
-   .footer-arrow {
+.footer-arrow {
     display: inline-block;
     width: 8px;
     height: 8px;
     margin-left: 5px;
     vertical-align: middle;
     object-fit: contain;
-    
+
     filter: brightness(0) invert(1);
+
+    transition: transform 0.25s ease;
 }
 
 .social-links a:hover .footer-arrow {
@@ -576,18 +523,238 @@ nav ul li a.contact:hover::after {
 
 
 /* =========================================================
+   TABLET / DESKTOP
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+    .projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 30px;
+        row-gap: 55px;
+        padding: 0 5vw;
+    }
+
+    .project-image {
+        height: 500px;
+    }
+
+    .bio-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 767px) {
 
+    /* -------------------------
+       Header
+       ------------------------- */
+
+    header {
+        padding: 22px 5vw 0;
+    }
+
+    .header-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-bottom: 24px;
+    }
+
+    .logo h1 {
+        font-size: 26px;
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+
+    /* -------------------------
+       Intro
+       ------------------------- */
+
+    .intro {
+        grid-template-columns: 1fr;
+        row-gap: 45px;
+        padding: 80px 5vw 90px;
+    }
+
+    .intro-label {
+        font-size: 14px;
+    }
+
+    /*
+       Removes the desktop offset so the
+       intro text aligns with / Maria Giannisi.
+    */
+
+    .intro-text {
+        margin-left: 0;
+    }
+
+    .intro-text p {
+        font-size: clamp(32px, 8vw, 48px);
+        line-height: 1.04;
+    }
+
+
+    /* -------------------------
+       Projects
+       ------------------------- */
+
+    .projects {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 35px;
+        padding: 0 5vw;
+    }
+
+
+    /* Title remains ABOVE image */
+
+    .project-name {
+        padding: 0 0 8px 0;
+        font-size: 0.75rem;
+    }
+
+
+    /*
+       Fixed image container.
+    */
+
+    .project-image {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 12px;
+    }
+
+
+    /* -------------------------
+       Focus Section
+       ------------------------- */
+
+    .focus-section {
+        grid-template-columns: 1fr;
+        row-gap: 45px;
+        padding: 70px 5vw 80px;
+    }
+
+    .focus-label {
+        font-size: 15px;
+    }
+
+    .focus-list {
+        margin-left: 0;
+    }
+
+    .focus-item {
+        grid-template-columns: 50px 1fr;
+        min-height: 65px;
+    }
+
+    .focus-number {
+        font-size: 15px;
+    }
+
+    .focus-title {
+        font-size: 18px;
+    }
+
+
+    /* -------------------------
+       Bio
+       ------------------------- */
+
+    .bio-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bio-image {
+        margin-bottom: 20px;
+    }
+
+    .bio-description {
+        max-width: 100%;
+    }
+
+
+    /* -------------------------
+       Project info
+       ------------------------- */
+
+    .project-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-info > div {
+        flex: none;
+        margin-bottom: 10px;
+    }
+
+
+    /* -------------------------
+       Footer
+       ------------------------- */
+
     .site-footer {
         grid-template-columns: 1fr;
-
         row-gap: 28px;
-
         padding: 35px 5vw 25px;
     }
+
+    /*
+       Content column:
+       ABOUT
+       CONTACT
+       PRIVACY
+       LEGAL NOTICE
+    */
+
+    .footer-column:first-child {
+        transform: none;
+    }
+
+    /*
+       Social sits directly underneath
+       the Content column / Legal Notice.
+    */
+
+    .footer-social {
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+    .social-links {
+        align-items: flex-start;
+    }
+
+    /*
+       Design & Development sits below
+       the social section.
+    */
 
     .footer-credit {
         justify-self: start;
@@ -608,6 +775,50 @@ nav ul li a.contact:hover::after {
         margin-bottom: 6px;
     }
 }
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .intro {
+        padding-top: 65px;
+    }
+
+    .intro-text {
+        margin-left: 0;
+    }
+
+    .intro-text p {
+        font-size: 31px;
+        letter-spacing: -0.045em;
+    }
+
+    .project h3 {
+        font-size: 1rem;
+    }
+
+
+    /*
+       Smaller but STILL equal image boxes.
+    */
+
+    .project-image {
+        height: 320px;
+        border-radius: 12px;
+    }
+
+    .project-image img {
+        border-radius: 12px;
+    }
+}
+
 
 /* =========================================================
    PROJECT DETAIL PAGE
@@ -654,7 +865,6 @@ nav ul li a.contact:hover::after {
     width: 85%;
     height: auto;
     margin: 0 auto 20px;
-
     border-radius: 8px;
 }
 
@@ -674,14 +884,12 @@ nav ul li a.contact:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 100%;
 }
 
 .poster {
     width: auto;
     height: auto;
-
     max-width: 60%;
     max-height: 680px;
 }
@@ -702,10 +910,8 @@ nav ul li a.contact:hover::after {
 
 video {
     display: block;
-
     width: 100%;
     height: auto;
-
     border-radius: 8px;
 }
 
@@ -729,9 +935,7 @@ video {
 #fullscreenBtn {
     background: none;
     border: none;
-
     font-size: 18px;
-
     cursor: pointer;
 }
 
@@ -747,59 +951,42 @@ video {
 
 .media-pair {
     display: grid;
-
     grid-template-columns: 40% 60%;
-
     gap: 2.5rem;
-
     height: 550px;
-
     margin: 4rem 20px;
-
     align-items: stretch;
 }
 
 .media-left {
     width: 100%;
     height: 100%;
-
     margin-right: 2rem;
-
     overflow: hidden;
-
     border-radius: 8px;
 }
 
 .media-left video {
     display: block;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     border-radius: 8px;
 }
 
 .media-right {
     width: 100%;
     height: 100%;
-
     max-width: 700px;
-
     margin-left: 2rem;
-
     overflow: hidden;
-
     border-radius: 8px;
 }
 
 .media-right img {
     display: block;
-
     width: 100%;
     height: 100%;
-
     object-fit: contain;
 }
 
@@ -825,7 +1012,6 @@ video {
     display: inline-block;
 
     color: #000;
-
     background-color: transparent;
 
     font-family: 'Courier New', Courier, monospace;
@@ -925,209 +1111,34 @@ video {
 
 
 /* =========================================================
-   TABLET / DESKTOP
-   ========================================================= */
-
-@media (min-width: 768px) {
-
-    .projects {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        column-gap: 30px;
-        row-gap: 55px;
-
-        padding: 0 5vw;
-    }
-
-    .project-image {
-        height: 500px;
-    }
-
-    .bio-content {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-/* =========================================================
-   MOBILE
+   FINAL MOBILE OVERRIDES
    ========================================================= */
 
 @media (max-width: 767px) {
 
-    /* -------------------------
-       Header
-    ------------------------- */
+    /* Intro aligns with logo/header */
 
-    header {
-        padding: 22px 5vw 0;
+    .intro-text {
+        margin-left: 0;
     }
 
-    .header-content {
-        grid-template-columns: 1fr;
+    /* Footer content stays on the left */
 
-        gap: 25px;
-
-        padding-bottom: 24px;
+    .footer-column:first-child {
+        transform: none;
     }
 
-    .logo h1 {
-        font-size: 26px;
+    /* Social aligns underneath Legal Notice */
+
+    .footer-social {
+        margin-left: 0;
+        padding-left: 0;
     }
 
-    nav ul {
-        gap: 25px;
-    }
+    /* Design & Development */
 
-    nav ul li a {
-        font-size: 20px;
-    }
-
-
-    /* -------------------------
-       Intro
-    ------------------------- */
-
-    .intro {
-        grid-template-columns: 1fr;
-
-        row-gap: 45px;
-
-        padding: 80px 5vw 90px;
-    }
-
-    .intro-label {
-        font-size: 14px;
-    }
-
-    .intro-text p {
-        font-size: clamp(32px, 8vw, 48px);
-
-        line-height: 1.04;
-    }
-
-
-    /* -------------------------
-       Projects
-    ------------------------- */
-
-    .projects {
-        grid-template-columns: 1fr;
-
-        column-gap: 0;
-        row-gap: 35px;
-
-        padding: 0 5vw;
-    }
-
-
-    /* Title remains ABOVE image */
-
-    .project-name {
-        padding: 0 0 8px 0;
-
-        font-size: 0.75rem;
-    }
-
-
-    /*
-       Fixed image container.
-
-       DO NOT change this to height: auto.
-    */
-
-    .project-image {
+    .footer-credit {
+        justify-self: start;
         width: 100%;
-
-        height: 400px;
-
-        overflow: hidden;
-
-        border-radius: 12px;
-    }
-
-
-    .project-image img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: contain;
-        object-position: center;
-    }
-
-
-    /* -------------------------
-       Bio
-    ------------------------- */
-
-    .bio-content {
-        flex-direction: column;
-
-        align-items: center;
-
-        text-align: center;
-    }
-
-    .bio-image {
-        margin-bottom: 20px;
-    }
-
-    .bio-description {
-        max-width: 100%;
-    }
-
-
-    /* -------------------------
-       Project info
-    ------------------------- */
-
-    .project-info {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-    .project-info > div {
-        flex: none;
-
-        margin-bottom: 10px;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    .logo h1 {
-        font-size: 24px;
-    }
-
-    .intro {
-        padding-top: 65px;
-    }
-
-    .intro-text p {
-        font-size: 31px;
-
-        letter-spacing: -0.045em;
-    }
-
-    .project h3 {
-        font-size: 1rem;
-    }
-
-
-    /*
-       Smaller but STILL equal image boxes.
-    */
-
-    .project-image {
-        height: 320px;
-
-        border-radius: 12px;
     }
 }
