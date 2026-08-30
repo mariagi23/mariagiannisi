@@ -452,6 +452,10 @@ nav ul li a.contact:hover::after {
     align-items: flex-start;
 }
 
+.footer-column:first-child {
+    transform: translateX(-5px);
+}
+
 
 /* =========================================================
    FOOTER HEADINGS
@@ -529,15 +533,15 @@ nav ul li a.contact:hover::after {
    FOOTER ARROW
    ========================================================= */
 
-.footer-arrow {
+   .footer-arrow {
     display: inline-block;
-
-    margin-left: 4px;
-
-    font-size: 0.8em;
-    line-height: 1;
-
-    transition: transform 0.25s ease;
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+    vertical-align: middle;
+    object-fit: contain;
+    
+    filter: brightness(0) invert(1);
 }
 
 .social-links a:hover .footer-arrow {
