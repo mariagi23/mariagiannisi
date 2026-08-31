@@ -707,3 +707,15 @@
     }
   
   }
+
+  @media (max-width: 767px) {
+    .media-pair,
+    .media-left,
+    .media-right,
+    .media-left video,
+    .media-right img {
+        box-sizing: border-box;
+        min-width: 0;
+        max-width: 100%;
+    }
+}
