@@ -1,177 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Maria Giannisi</title>
-<link rel="icon" href="img/Favicon.png" type="image/png" />
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-html {
-scroll-behavior: smooth;
-}
+  <title>Maria Giannisi</title>
 
-@font-face {
-font-family: 'AktivGrotesk';
-src: url('font/AktivGroteskCorp-Regular.ttf');
-}
+  <link rel="icon" href="img/Favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
 
-.project-name {
-position: static;
-width: 100%;
-color: rgb(54, 54, 54);
-text-align: left;
-padding: 8px 0 0 0;
-opacity: 1;
-font-family: 'AktivGrotesk', sans-serif;
-font-size: 0.75rem;
-line-height: 1.2;
-}
-</style>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @font-face {
+      font-family: "AktivGrotesk";
+      src: url("font/AktivGroteskCorp-Regular.ttf");
+    }
+
+    /* =========================================
+       PROJECT NAMES
+       ========================================= */
+
+    .project-name {
+      position: static;
+      width: 100%;
+      color: rgb(54, 54, 54);
+      text-align: left;
+      padding: 8px 0 0;
+      opacity: 1;
+      font-family: "AktivGrotesk", sans-serif;
+      font-size: 0.75rem;
+      line-height: 1.2;
+    }
+
+    /* Only the project title is bold */
+    .project-name strong {
+      font-weight: 700;
+    }
+
+    /* =========================================
+       FOOTER
+       ========================================= */
+
+    footer {
+      width: 100%;
+      margin: 0;
+      padding: 40px 20px 10px;
+      font-family: "AktivGrotesk", sans-serif;
+      font-size: 0.75rem;
+    }
+
+    .footer-content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      text-align: left;
+    }
+
+    .footer-right {
+      margin-left: auto;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    footer a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* =========================================
+       MOBILE FOOTER
+       ========================================= */
+
+    @media (max-width: 767px) {
+
+      footer {
+        padding: 30px 10px 5px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-left {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        text-align: left;
+      }
+
+      .footer-right {
+        width: 100%;
+        margin-left: 0;
+        text-align: right;
+      }
+    }
+  </style>
 </head>
+
 
 <body>
 
-<header>
-<div class="header-content">
-<div class="logo">
-<h1>Maria Giannisi</h1>
-</div>
+  <!-- =========================================
+       HEADER
+       ========================================= -->
 
-<nav>
-<ul>
-<li><a href="Bio.html">Bio</a></li>
-<li><a href="mailto:ma.gi@hotmail.co.uk">Contact</a></li>
-</ul>
-</nav>
+  <header>
+    <div class="header-content">
 
-<div class="language-switcher">
-<a href="index.html">EN</a> | <a href="index-de.html">DE</a>
-</div>
-</div>
-</header>
+      <div class="logo">
+        <h1>Maria Giannisi</h1>
+      </div>
 
-<section class="projects">
+      <nav>
+        <ul>
+          <li>
+            <a href="Bio.html">Bio</a>
+          </li>
 
-<!-- Strong Project -->
-<div class="project">
-<a href="Strong-Projekt.html">
-<img
-src="img/Mockup-Strong.jpg"
-alt="Strong Project"
-loading="lazy"
-width="800"
-height="600"
-/>
-<div class="project-name">Strong Project / Webdesign</div>
-</a>
-</div>
+          <li>
+            <a href="mailto:ma.gi@hotmail.co.uk">Contact</a>
+          </li>
+        </ul>
+      </nav>
 
-<!-- SiUSpace Website -->
-<div class="project">
-<a href="project1.html">
-<img
-src="img/SIUSPACE-Mockup.jpg"
-alt="SiUSpace Website"
-loading="lazy"
-width="800"
-height="600"
-/>
-<div class="project-name">SiUSpace / Webdesign</div>
-</a>
-</div>
+      <div class="language-switcher">
+        <a href="index.html">EN</a> |
+        <a href="index-de.html">DE</a>
+      </div>
 
-<!-- Großstadtzoo Website -->
-<div class="project">
-<a href="project2.html">
-<img
-src="img/GRZO-3.png"
-alt="Großstadtzoo Website"
-loading="lazy"
-width="800"
-height="600"
-/>
-<div class="project-name">Großstadtzoo / Webdesign</div>
-</a>
-</div>
+    </div>
+  </header>
 
-<div class="project">
-<a href="social-media-tegut.html">
-<img
-src="img/tegut-2.jpg"
-alt="tegut Social Media"
-loading="lazy"
-width="800"
-height="600"
-/>
-<div class="project-name">tegut / Social Media </div>
-</a>
-</div>
 
-<!-- Civicomm App -->
-<div class="project">
-<a href="project3.html">
-<img
-src="img/Mockup-civic-comm.jpg"
-alt="Civicomm App"
-loading="lazy"
-width="800"
-height="600"
-/>
-<div class="project-name">Civicomm / UX-UI Design</div>
-</a>
-</div>
+  <!-- =========================================
+       PROJECTS
+       ========================================= -->
 
-<!-- Understanding Democracy -->
-<div class="project">
-<a href="project4.html">
-<img
-src="img/Page-1.jpg"
-alt="Understanding Democracy"
-loading="lazy"
-width="800"
-height="600"
-/>
-<div class="project-name">Understanding Democracy / Illustration</div>
-</a>
-</div>
+  <section class="projects">
 
-<!-- Porto/Post/Doc Poster -->
-<div class="project">
-<a href="project5.html">
-<img
-src="img/FinPorto.jpg"
-alt="Porto/Post/Doc Poster"
-loading="lazy"
-width="800"
-height="600"
-/>
-<div class="project-name">Porto/Post/Doc Poster</div>
-</a>
-</div>
+    <!-- Strong Project -->
+    <div class="project">
+      <a href="Strong-Projekt.html">
 
-<!-- Kolloquium -->
-<div class="project">
-<a href="project6.html">
-<img
-src="img/Kolloquium_1.png"
-alt="Kolloquium"
-loading="lazy"
-width="800"
-height="600"
-/>
-<div class="project-name">Kolloquium / Photograhy / Editorial Design</div>
-</a>
-</div>
+        <img
+          src="img/Mockup-Strong.jpg"
+          alt="Strong Project"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
 
-</section>
+        <div class="project-name">
+          <strong>Strong Project</strong> / Webdesign
+        </div>
 
-<footer>
-<p>© 2026 Maria Giannisi</p>
-</footer>
+      </a>
+    </div>
+
+
+    <!-- SiUSpace -->
+    <div class="project">
+      <a href="project1.html">
+
+        <img
+          src="img/SIUSPACE-Mockup.jpg"
+          alt="SiUSpace Website"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+
+        <div class="project-name">
+          <strong>SiUSpace</strong> / Webdesign
+        </div>
+
+      </a>
+    </div>
+
+
+    <!-- Großstadtzoo -->
+    <div class="project">
+      <a href="project2.html">
+
+        <img
+          src="img/GRZO-3.png"
+          alt="Großstadtzoo Website"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+
+        <div class="project-name">
+          <strong>Großstadtzoo</strong> / Webdesign
+        </div>
+
+      </a>
+    </div>
+
+
+    <!-- tegut -->
+    <div class="project">
+      <a href="social-media-tegut.html">
+
+        <img
+          src="img/tegut-2.jpg"
+          alt="tegut Social Media"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+
+        <div class="project-name">
+          <strong>tegut</strong> / Social Media
+        </div>
+
+      </a>
+    </div>
+
+
+    <!-- Civicomm -->
+    <div class="project">
+      <a href="project3.html">
+
+        <img
+          src="img/Mockup-civic-comm.jpg"
+          alt="Civicomm App"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+
+        <div class="project-name">
+          <strong>Civicomm</strong> / UX-UI Design
+        </div>
+
+      </a>
+    </div>
+
+
+    <!-- Understanding Democracy -->
+    <div class="project">
+      <a href="project4.html">
+
+        <img
+          src="img/Page-1.jpg"
+          alt="Understanding Democracy"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+
+        <div class="project-name">
+          <strong>Understanding Democracy</strong> / Illustration
+        </div>
+
+      </a>
+    </div>
+
+
+    <!-- Porto/Post/Doc -->
+    <div class="project">
+      <a href="project5.html">
+
+        <img
+          src="img/FinPorto.jpg"
+          alt="Porto/Post/Doc Poster"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+
+        <div class="project-name">
+          <strong>Porto/Post/Doc</strong> / Poster
+        </div>
+
+      </a>
+    </div>
+
+
+    <!-- Kolloquium -->
+    <div class="project">
+      <a href="project6.html">
+
+        <img
+          src="img/Kolloquium_1.png"
+          alt="Kolloquium"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+
+        <div class="project-name">
+          <strong>Kolloquium</strong> / Photography / Editorial Design
+        </div>
+
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+
+  <footer>
+
+    <div class="footer-content">
+
+      <div class="footer-left">
+
+        <a href="mailto:ma.gi@hotmail.co.uk">
+          © Maria Giannisi, 2026
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/maria-giannisi-0198899b/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://www.instagram.com/maria_giannisi/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+      </div>
+
+
+      <div class="footer-right">
+        All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
-
-
