@@ -47,7 +47,7 @@
   
   .logo h1,
   .logo a {
-    font-family: "Courier New", Courier, monospace;
+    font-family: "AktivGroteskMedium";
     font-size: 16px;
   }
   
@@ -67,11 +67,11 @@
     color: #333;
     font-weight: bold;
     font-size: 16px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "AktivGroteskMedium";
   }
   
   .language-switcher {
-    font-family: "Courier New", Courier, monospace;
+    font-family: "AktivGroteskMedium";
     font-size: 16px;
     margin-left: auto;
     display: flex;
