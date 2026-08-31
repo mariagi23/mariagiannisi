@@ -1034,3 +1034,15 @@
       margin: 0 auto;
     }
   }
+
+  @media (min-width: 768px) {
+
+    .media-pair {
+      height: 500px;
+    }
+  
+    .media-right img {
+      width: 90%;
+    }
+  
+  }
