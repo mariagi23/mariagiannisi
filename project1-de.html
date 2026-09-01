@@ -1,149 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SiUSpace</title>
+
     <link rel="icon" href="img/Favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+
     <style>
-        /* Enable smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
 
         @font-face {
-            font-family: 'AktivGrotesk';
-            src: url('font/AktivGroteskCorp-Regular.ttf');
+            font-family: "AktivGrotesk";
+            src: url("font/AktivGroteskCorp-Regular.ttf");
         }
 
         @font-face {
-    font-family: "AktivGroteskMedium";
-    src: url("font/AktivGroteskCorp-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-    
-  }
+            font-family: "AktivGroteskMedium";
+            src: url("font/AktivGroteskCorp-Medium.ttf") format("truetype");
+            font-weight: 500;
+            font-style: normal;
+        }
     </style>
 </head>
+
+
 <body>
 
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
     <header>
+
         <div class="header-content">
+
             <div class="logo">
-                <h1><a href="index.html" data-value="Maria Giannisi">Maria Giannisi</a></h1>
+                <h1>
+                    <a href="index.html" data-value="Maria Giannisi">
+                        Maria Giannisi
+                    </a>
+                </h1>
             </div>
+
+
             <nav>
                 <ul>
-                    <li><a href="#">Bio</a></li>
-                    <li><a href="#">Kontakt</a></li>
+
+                    <li>
+                        <a href="Bio.html">Bio</a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:ma.gi@hotmail.co.uk">
+                            Kontakt
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
+
+
             <div class="language-switcher">
-                <a href="project1.html">EN</a> | <a href="project1-de.html">DE</a>
+                <a href="project1.html">EN</a> |
+                <a href="project1-de.html">DE</a>
             </div>
+
         </div>
+
     </header>
 
-    <section class="project-details">
 
-            <!-- First Row (3 columns) -->
-     <div class="project-info">
-        <div class="project-title">WEB DESIGN</div>
-        <div class="project-type">FIGMA</div>
-        <div class="project-description"> 
-            <p>SiUSpace verbessert die Sicherheit im Drohnenbetrieb, indem externe Gefahren wie Wetter, unkooperative Flugobjekte oder Bodenereignisse frühzeitig erkannt und bewertet werden. Dafür nutzt das Projekt Daten aus verschiedensten Quellen und setzt KI ein, um automatisch Handlungsempfehlungen zu erstellen. Ein Laborsystem demonstriert die Funktionen, ergänzt durch Kommunikations- und Schulungskonzepte.</p>
-            <br>
-            <p>Meine Rolle im Projekt umfasste die Konzeption und Gestaltung der Website sowie die Programmierung und Umsetzung mit dem CMS WordPress.</p>
-        </div>
-     </div>
+    <!-- =========================================
+         PROJECT HERO
+         ========================================= -->
 
-    </section>   
+    <div class="project-hero">
 
+        <img
+            src="img/SIUSPACE-Mockup.png"
+            alt="SiUSpace Website"
+        >
 
-    <div class="full-media-wrapper">
-        <video id="brochureVideo" class="full-media" controls>
-          <source src="vds/Siuspace.mp4" type="video/mp4">
-        </video>
-      
-      </div>
-
-      <div class="media-pair icons-pair">
-
-        <div class="media-left">
-          <video src="vds/Icons_550.mp4" loop muted autoplay></video>
-        </div>
-      
-        <div class="media-right">
-          <img src="img/Icons_klein.png" alt="Description">
-        </div>
-      
-      </div>
-      
-      <div class="full-image-wrapper">
-        <img class="full-image" src="img/SiUSpace_Mockup.png" alt="Full Project Image">
-    </div>
-
-    <div class="full-image-wrapper">
-        <img class="full-image" src="img/Typo_Deutsch.png" alt="Full Project Image">
-    </div>
-       
-
-
-      <!-- Credits -->
-      <div class="credits">
-        <p>
-            
-            <br>https://www.siuspace.com/</br>
-        </p>
-    </div>
-        
-    <div class="navigation-wrapper">
-        <a href="index.html" class="back-btn">Zurück zu allen Projekten</a>
-        <a href="project2-de.html" class="next-btn">Nächstes Projekt</a>
     </div>
 
 
     <!-- =========================================
-     FOOTER
-     ========================================= -->
+         ABOUT THE PROJECT
+         ========================================= -->
 
-<footer>
+    <section class="project-about">
 
-    <div class="footer-content">
-  
-      <div class="footer-left">
-  
-        <a href="mailto:ma.gi@hotmail.co.uk">
-          © Maria Giannisi, 2026
-        </a>
-  
-        <a
-          href="https://www.linkedin.com/in/maria-giannisi-0198899b/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-  
-        <a
-          href="https://www.instagram.com/maria_giannisi/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-  
-      </div>
-  
-  
-      <div class="footer-right">
-        Alle Rechte vorbehalten.
-      </div>
-  
+        <!-- LEFT -->
+
+        <div class="project-about-label">
+            Über das Projekt
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="project-about-content">
+
+            <div class="project-description">
+
+                <p>
+                    SiUSpace verbessert die Sicherheit im Drohnenbetrieb,
+                    indem externe Gefahren wie Wetter, unkooperative
+                    Flugobjekte oder Bodenereignisse frühzeitig erkannt
+                    und bewertet werden. Dafür nutzt das Projekt Daten
+                    aus verschiedensten Quellen und setzt KI ein, um
+                    automatisch Handlungsempfehlungen zu erstellen.
+                    Ein Laborsystem demonstriert die Funktionen,
+                    ergänzt durch Kommunikations- und
+                    Schulungskonzepte.
+                </p>
+
+
+                <p>
+                    Meine Rolle im Projekt umfasste die Konzeption und
+                    Gestaltung der Website sowie die Programmierung und
+                    Umsetzung mit dem CMS WordPress.
+                </p>
+
+            </div>
+
+
+            <!-- PROJECT INFORMATION -->
+
+            <div class="project-meta">
+
+                <div class="project-meta-row">
+
+                    <span class="project-meta-label">
+                        Kunde
+                    </span>
+
+                    <span class="project-meta-value">
+                        SiUSpace
+                    </span>
+
+                </div>
+
+
+                <div class="project-meta-row">
+
+                    <span class="project-meta-label">
+                        Leistungen
+                    </span>
+
+                    <span class="project-meta-value">
+                        Webdesign
+                    </span>
+
+                </div>
+
+
+                <div class="project-meta-row">
+
+                    <span class="project-meta-label">
+                        Jahr
+                    </span>
+
+                    <span class="project-meta-value">
+                        2026
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             MAIN VIDEO
+             ========================================= -->
+
+        <div class="full-media-wrapper">
+
+            <video
+                id="brochureVideo"
+                class="full-media"
+                controls
+            >
+                <source
+                    src="vds/Siuspace.mp4"
+                    type="video/mp4"
+                >
+            </video>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         TWO MEDIA SIDE-BY-SIDE
+         ========================================= -->
+
+    <div class="media-pair icons-pair">
+
+        <div class="media-left">
+
+            <video
+                src="vds/Icons_550.mp4"
+                loop
+                muted
+                autoplay
+            ></video>
+
+        </div>
+
+
+        <div class="media-right">
+
+            <img
+                src="img/Icons_klein.png"
+                alt="SiUSpace Icons"
+            >
+
+        </div>
+
     </div>
-  
-  </footer>
+
+
+    <!-- =========================================
+         FULL-WIDTH IMAGE
+         ========================================= -->
+
+    <div class="full-image-wrapper">
+
+        <img
+            class="full-image"
+            src="img/SiUSpace_Mockup.png"
+            alt="SiUSpace Website Mockup"
+        >
+
+    </div>
+
+
+    <!-- =========================================
+         TYPOGRAPHY IMAGE
+         ========================================= -->
+
+    <div class="full-image-wrapper">
+
+        <img
+            class="full-image"
+            src="img/Typo_Deutsch.png"
+            alt="SiUSpace Typography"
+        >
+
+    </div>
+
+
+    <!-- =========================================
+         CREDITS
+         ========================================= -->
+
+    <div class="credits">
+
+        <p>
+            <a href="https://www.siuspace.com" target="_blank" rel="noopener noreferrer">
+                https://www.siuspace.com
+            </a>
+        </p>
+
+    </div>
+
+
+    <!-- =========================================
+         PROJECT NAVIGATION
+         ========================================= -->
+
+    <div class="navigation-wrapper">
+
+        <a
+            href="index.html"
+            class="back-btn"
+        >
+            Zurück zu allen Projekten
+        </a>
+
+
+        <a
+            href="project2-de.html"
+            class="next-btn"
+        >
+            Nächstes Projekt
+        </a>
+
+    </div>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-left">
+
+                <a href="mailto:ma.gi@hotmail.co.uk">
+                    © Maria Giannisi, 2026
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/maria-giannisi-0198899b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/maria_giannisi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+            </div>
+
+
+            <div class="footer-right">
+                Alle Rechte vorbehalten.
+            </div>
+
+        </div>
+
+    </footer>
+
 
 </body>
 </html>

@@ -1,141 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Civicomm</title>
+
     <link rel="icon" href="img/Favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+
     <style>
-        /* Enable smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
 
         @font-face {
-            font-family: 'AktivGrotesk';
-            src: url('font/AktivGroteskCorp-Regular.ttf');
+            font-family: "AktivGrotesk";
+            src: url("font/AktivGroteskCorp-Regular.ttf");
         }
 
         @font-face {
-    font-family: "AktivGroteskMedium";
-    src: url("font/AktivGroteskCorp-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-    
-  }
-
+            font-family: "AktivGroteskMedium";
+            src: url("font/AktivGroteskCorp-Medium.ttf");
+            font-weight: 500;
+            font-style: normal;
+        }
     </style>
 </head>
+
+
 <body>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <h1><a href="index.html" data-value="Maria Giannisi">Maria Giannisi</a></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="Bio.html">Bio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="language-switcher">
-                <a href="project3.html">EN</a> | <a href="project3-de.html">DE</a>
-            </div>
+<!-- =========================================
+     HEADER
+     ========================================= -->
+
+<header>
+    <div class="header-content">
+
+        <div class="logo">
+            <h1>
+                <a href="index.html">Maria Giannisi</a>
+            </h1>
         </div>
-    </header>
 
-    <section class="project-details">
+        <nav>
+            <ul>
+                <li>
+                    <a href="Bio.html">Bio</a>
+                </li>
 
-            <!-- First Row (3 columns) -->
-     <div class="project-info">
-        <div class="project-title">BACHELORARBEIT</div>
-        <div class="project-type">APP DESIGN</div>
-        <div class="project-description">CiviComm stands for Civic – “relating to a citizen” – and Community. The aim is to focus on empowering communities to take ownership of their city.
+                <li>
+                    <a href="mailto:ma.gi@hotmail.co.uk">Contact</a>
+                </li>
+            </ul>
+        </nav>
 
-            Through this app, citizens can report problems in their neighborhood and simultaneously get involved as volunteers.
-            
-             </div>
-     </div>
+        <div class="language-switcher">
+            <a href="project3.html">EN</a> |
+            <a href="project3-de.html">DE</a>
+        </div>
 
-    </section>     
+    </div>
+</header>
 
 
-    <div class="full-image-wrapper">
-        <img class="full-image reduced-image" src="img/App_1.png" alt="Full Project Image">
+<!-- =========================================
+     PROJECT HERO
+     ========================================= -->
+
+<div class="civicomm-project-hero">
+
+    <img
+        src="img/App_1.png"
+        alt="Civicomm App"
+    >
+
+</div>
+
+
+<!-- =========================================
+     ABOUT THE PROJECT
+     ========================================= -->
+
+<section class="civicomm-project-about">
+
+    <!-- LEFT -->
+
+    <div class="civicomm-project-about-label">
+        About the project
     </div>
 
-      <!-- Centered paragraph -->
-      <div class="project-paragraph">
-        <p>
-            The app offers volunteer opportunities published by local groups, individual citizens, and government authorities.
 
-            Its primary goal is to promote a sense of shared responsibility between citizens and the state.
-                    
+    <!-- RIGHT -->
 
-        </p>
-    </div>
+    <div class="civicomm-project-about-content">
 
-    <!-- Second full-width image -->
-    <div class="full-image-wrapper">
-        <img class="full-image reduced-image" src="img/App_2.webp" alt="Second Full Project Image">
-    </div>
+        <div class="civicomm-project-description">
 
-     <!-- Third full-width image -->
-     <div class="full-image-wrapper">
-        <img class="full-image smaller-image" src="img/App_3.gif" alt="Third Full Project Image">
-    </div>
+            <p>
+                CiviComm stands for Civic – “relating to a citizen” –
+                and Community. The aim is to focus on empowering
+                communities to take ownership of their city.
+            </p>
 
-      <!-- Credits -->
-      <div class="credits">
-        <p>
+            <p>
+                Through this app, citizens can report problems in
+                their neighborhood and simultaneously get involved
+                as volunteers. It offers volunteer opportunities published by local
+                groups, individual citizens, and government authorities.
         
-        </p>
+                Its primary goal is to promote a sense of shared responsibility
+                between citizens and the state.
+            </p>
+
+        </div>
+
+
+        <!-- PROJECT INFORMATION -->
+
+        <div class="civicomm-project-meta">
+
+            <div class="civicomm-project-meta-row">
+
+                <span class="civicomm-project-meta-label">
+                    Services
+                </span>
+
+                <span class="civicomm-project-meta-value">
+                    App Design
+                </span>
+
+            </div>
+
+
+            <div class="civicomm-project-meta-row">
+
+                <span class="civicomm-project-meta-label">
+                    Tools
+                </span>
+
+                <span class="civicomm-project-meta-value">
+                    Figma
+                </span>
+
+            </div>
+
+
+            <div class="civicomm-project-meta-row">
+
+                <span class="civicomm-project-meta-label">
+                    Type
+                </span>
+
+                <span class="civicomm-project-meta-value">
+                    Bachelor Thesis
+                </span>
+
+            </div>
+
+        </div>
+
     </div>
-        
-    <div class="navigation-wrapper">
-        <a href="index.html" class="back-btn">Back to Projects</a>
-        <a href="project4.html" class="next-btn">Next Project</a>
-    </div>
+
+</section>
 
 
-    <footer>
 
-        <div class="footer-content">
-    
-          <div class="footer-left">
-    
+<!-- =========================================
+     PROJECT IMAGES 02 + 03
+     ========================================= -->
+
+     <div class="civicomm-image-pair">
+
+      <div class="civicomm-image-item">
+          <img
+              class="civicomm-pair-image"
+              src="img/App_2.png"
+              alt="Civicomm App interface"
+          >
+      </div>
+  
+      <div class="civicomm-image-item">
+          <img
+              class="civicomm-pair-image"
+              src="img/App_3.gif"
+              alt="Civicomm App interaction"
+          >
+      </div>
+  
+  </div>
+
+
+<!-- =========================================
+     PROJECT NAVIGATION
+     ========================================= -->
+
+<div class="navigation-wrapper">
+
+    <a href="index.html" class="back-btn">
+        Back to Projects
+    </a>
+
+    <a href="project4.html" class="next-btn">
+        Next Project
+    </a>
+
+</div>
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
             <a href="mailto:ma.gi@hotmail.co.uk">
-              © Maria Giannisi, 2026
+                © Maria Giannisi, 2026
             </a>
-    
+
             <a
-              href="https://www.linkedin.com/in/maria-giannisi-0198899b/"
-              target="_blank"
-              rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/maria-giannisi-0198899b/"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-              LinkedIn
+                LinkedIn
             </a>
-    
+
             <a
-              href="https://www.instagram.com/maria_giannisi/"
-              target="_blank"
-              rel="noopener noreferrer"
+                href="https://www.instagram.com/maria_giannisi/"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-              Instagram
+                Instagram
             </a>
-    
-          </div>
-    
-    
-          <div class="footer-right">
-            All rights reserved.
-          </div>
-    
+
         </div>
-    
-      </footer>
+
+
+        <div class="footer-right">
+            All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
 
 
 </body>

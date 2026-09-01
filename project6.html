@@ -1,133 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Civicomm</title>
+
+    <title>Kolloquium</title>
+
     <link rel="icon" href="img/Favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+
     <style>
-        /* Enable smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
 
         @font-face {
-            font-family: 'AktivGrotesk';
-            src: url('font/AktivGroteskCorp-Regular.ttf');
+            font-family: "AktivGrotesk";
+            src: url("font/AktivGroteskCorp-Regular.ttf");
         }
 
         @font-face {
-    font-family: "AktivGroteskMedium";
-    src: url("font/AktivGroteskCorp-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-    
-  }
+            font-family: "AktivGroteskMedium";
+            src: url("font/AktivGroteskCorp-Medium.ttf") format("truetype");
+            font-weight: 500;
+            font-style: normal;
+        }
     </style>
 </head>
+
+
 <body>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <h1><a href="index.html" data-value="Maria Giannisi">Maria Giannisi</a></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="Bio.html">Bio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="language-switcher">
-                <a href="project6.html">EN</a> | <a href="project6-de.html">DE</a>
-            </div>
+<!-- =========================================
+     HEADER
+     ========================================= -->
+
+<header>
+
+    <div class="header-content">
+
+        <div class="logo">
+            <h1>
+                <a href="index.html">Maria Giannisi</a>
+            </h1>
         </div>
-    </header>
 
-    <section class="project-details">
+        <nav>
+            <ul>
 
-            <!-- First Row (3 columns) -->
-     <div class="project-info">
-        <div class="project-title">KOLLOQUIUM</div>
-        <div class="project-type">EDITORIAL & PHOTOGRAPHY</div>
-        <div class="project-description">This work was completed as part of the interdisciplinary colloquium module. 
-            The projects from the past semesters were documented in analog form, and a personal reflection was made. </div>
+                <li>
+                    <a href="Bio.html">Bio</a>
+                </li>
 
-     </div>
+                <li>
+                    <a href="mailto:ma.gi@hotmail.co.uk">Contact</a>
+                </li>
 
-    </section>     
+            </ul>
+        </nav>
 
+        <div class="language-switcher">
+            <a href="project6.html">EN</a> |
+            <a href="project6-de.html">DE</a>
+        </div>
 
-    <div class="full-image-wrapper">
-        <img class="full-image" src="img/Kolloquium_1.png" alt="Full Project Image">
     </div>
 
-    <!-- Second full-width image -->
-    <div class="full-image-wrapper">
-        <img class="full-image" src="img/Kolloquium_2.png" alt="Second Full Project Image">
+</header>
+
+
+<!-- =========================================
+     PROJECT HERO
+     ========================================= -->
+
+<div class="project-hero">
+
+    <img
+        src="img/Kolloquium_1.png"
+        alt="Kolloquium Project"
+    >
+
+</div>
+
+
+<!-- =========================================
+     ABOUT THE PROJECT
+     ========================================= -->
+
+<section class="kolloquium-project-about">
+
+    <!-- LEFT -->
+
+    <div class="kolloquium-project-about-label">
+        About the project
     </div>
 
-     <!-- Third full-width image -->
-     <div class="full-image-wrapper">
-        <img class="full-image" src="img/Kolloqium_3.png" alt="Second Full Project Image">
+
+    <!-- RIGHT -->
+
+    <div class="kolloquium-project-about-content">
+
+        <div class="kolloquium-project-description">
+
+            <p>
+                This work was completed as part of the interdisciplinary
+                colloquium module.
+            </p>
+
+            <p>
+                The projects from the past semesters were documented
+                in analog form, and a personal reflection was made.
+                The publication combines editorial design and
+                photography to create a visual documentation of the
+                different projects and experiences.
+            </p>
+
+        </div>
+
+
+        <!-- PROJECT INFORMATION -->
+
+        <div class="kolloquium-project-meta">
+
+            <div class="kolloquium-project-meta-row">
+
+                <span class="kolloquium-project-meta-label">
+                    Services
+                </span>
+
+                <span class="kolloquium-project-meta-value">
+                    Editorial Design, Photography
+                </span>
+
+            </div>
+
+
+            <div class="kolloquium-project-meta-row">
+
+                <span class="kolloquium-project-meta-label">
+                    Tools
+                </span>
+
+                <span class="kolloquium-project-meta-value">
+                    Adobe InDesign
+                </span>
+
+            </div>
+
+
+            <div class="kolloquium-project-meta-row">
+
+                <span class="kolloquium-project-meta-label">
+                    Year
+                </span>
+
+                <span class="kolloquium-project-meta-value">
+                    2026
+                </span>
+
+            </div>
+
+        </div>
+
     </div>
 
-      <!-- Third full-width image -->
-      <div class="full-image-wrapper">
-        <img class="full-image" src="img/Kolloquium_4.png" alt="Second Full Project Image">
+</section>
+
+
+<!-- =========================================
+     PROJECT IMAGES 02 + 03
+     SIDE-BY-SIDE
+     ========================================= -->
+
+<div class="kolloquium-image-pair">
+
+    <div class="kolloquium-image-item">
+
+        <img
+            class="kolloquium-pair-image"
+            src="img/Kolloquium_2.png"
+            alt="Kolloquium editorial design"
+        >
+
     </div>
 
-      <!-- Credits -->
-      <div class="credits">
-        <p>
-            Many thanks to the students of the Inter-University Centre for Dance Berlin (HZT) and Lina Gomez.
-           
-        </p>
-    </div>
-        
-    <div class="navigation-wrapper">
-        <a href="index.html" class="back-btn">Back to Projects</a>
-        <a href="project1.html" class="next-btn">Next Project</a>
+
+    <div class="kolloquium-image-item">
+
+        <img
+            class="kolloquium-pair-image"
+            src="img/Kolloquium_4.png"
+            alt="Kolloquium editorial design"
+        >
+
     </div>
 
+</div>
 
-    <footer>
 
-        <div class="footer-content">
+<!-- =========================================
+     PROJECT IMAGE 04
+     FULL WIDTH
+     ========================================= -->
+
+<div class="kolloquium-full-image-wrapper">
+
+    <img
+        class="kolloquium-full-image"
+        src="img/Kolloqium_3.png"
+        alt="Kolloquium project"
+    >
+
+</div>
+
+
+<!-- =========================================
+     CREDITS
     
-          <div class="footer-left">
-    
+ <div class="kolloquium-credits">
+
+    <p>
+        Many thanks to the students of the Inter-University Centre
+        for Dance Berlin (HZT) and Lina Gomez.
+    </p>
+
+</div>
+
+ ========================================= -->
+
+<!-- =========================================
+     PROJECT NAVIGATION
+     ========================================= -->
+
+<div class="navigation-wrapper">
+
+    <a
+        href="index.html"
+        class="back-btn"
+    >
+        Back to Projects
+    </a>
+
+    <a
+        href="project1.html"
+        class="next-btn"
+    >
+        Next Project
+    </a>
+
+</div>
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
             <a href="mailto:ma.gi@hotmail.co.uk">
-              © Maria Giannisi, 2026
+                © Maria Giannisi, 2026
             </a>
-    
+
             <a
-              href="https://www.linkedin.com/in/maria-giannisi-0198899b/"
-              target="_blank"
-              rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/maria-giannisi-0198899b/"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-              LinkedIn
+                LinkedIn
             </a>
-    
+
             <a
-              href="https://www.instagram.com/maria_giannisi/"
-              target="_blank"
-              rel="noopener noreferrer"
+                href="https://www.instagram.com/maria_giannisi/"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-              Instagram
+                Instagram
             </a>
-    
-          </div>
-    
-    
-          <div class="footer-right">
-            All rights reserved.
-          </div>
-    
+
         </div>
-    
-      </footer>
+
+
+        <div class="footer-right">
+            All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
 
 
 </body>

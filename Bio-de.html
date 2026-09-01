@@ -1,136 +1,327 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bio - Maria Giannisi</title>
-    <link rel="icon" href="img/Favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Enable smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
+<html lang="de">
 
-        @font-face {
-            font-family: 'AktivGrotesk';
-            src: url('font/AktivGroteskCorp-Regular.ttf');
-        }
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bio - Maria Giannisi</title>
+
+  <link rel="icon" href="img/Favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @font-face {
+      font-family: "AktivGrotesk";
+      src: url("font/AktivGroteskCorp-Regular.ttf");
+    }
+
+    @font-face {
+      font-family: "AktivGroteskMedium";
+      src: url("font/AktivGroteskCorp-Medium.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+    }
+  </style>
 </head>
+
+
 <body>
 
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <h1><a href="index.html" data-value="Maria Giannisi">Maria Giannisi</a></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="Bio.html">Bio</a></li>
-                    <li><a href="mailto:ma.gi@hotmail.co.uk">Kontakt</a></li>
-                </ul>
-            </nav>
-            <div class="language-switcher">
-                <a href="Bio.html">EN</a> | <a href="Bio-de.html">DE</a>
-            </div>
-        </div>
-    </header>
+<!-- =========================================
+     HEADER
+     ========================================= -->
 
-    <div class="bio">
-        <div class="bio-content">
-            <div class="bio-image">
-                <img src="img/Me.jpg" alt="Maria Giannisi">
-            </div>
-            <div class="bio-description">
-                   <p>Zwischen Interface und Graphikdesign: </p>
-                   <p>Meine Schwerpunkte liegen auf Web-Design, Branding und Social Media.  </p>
-                <br><p><strong>Großstadtzoo Studio für Gestaltung</strong><br>Graphikdesignerin [2024 - aktuell]</p><br>
-                <p><strong>Urban Electric Mobility Initiative // Urban Living Lab Center</strong><br>Social Media Management & Graphikdesign [2023-2024]</p>
-                <br><p><strong>Reiner Lemoine Institut</strong><br>SHK Interface Design [2020-2021]</p></br>
-                <p><strong>Fachhochschule Potsdam</strong><br>Fachbereich Interface Design [2020-2024]</p>
-                <br><p><strong>Akelius Languages GmbH</strong><br>Content & Foto Editor [2019-2020]</p><br>
-            </div>
-        </div>
+<header>
+
+  <div class="header-content">
+
+    <div class="logo">
+      <h1>
+        <a href="index.html" id="scramble">
+          Maria Giannisi
+        </a>
+      </h1>
     </div>
-    
 
-    <!-- =========================================
+    <nav>
+      <ul>
+
+        <li>
+          <a href="Bio-de.html">Bio</a>
+        </li>
+
+        <li>
+          <a href="mailto:ma.gi@hotmail.co.uk">
+            Kontakt
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="language-switcher">
+      <a href="Bio.html">EN</a> |
+      <a href="Bio-de.html">DE</a>
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================
+     BIO INTRO
+     ========================================= -->
+
+<main class="bio-page">
+
+
+  <section class="bio-intro">
+
+    <!-- LEFT -->
+
+    <div class="bio-intro-left">
+
+      <div class="bio-name">
+        Über mich
+      </div>
+
+      <div class="bio-role">
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT -->
+
+    <div class="bio-intro-right">
+
+      <h2>
+        Zwischen Interface- und Grafikdesign entwickle ich
+        digitale Erlebnisse, visuelle Identitäten und
+        Kommunikation, die Menschen mit Ideen verbinden.
+      </h2>
+
+      <p>
+        Meine Arbeit konzentriert sich auf Webdesign, Branding,
+        Interface Design und Social-Media-Strategie. Ich arbeite
+        gerne disziplinübergreifend und übersetze komplexe
+        Inhalte in klare und zugängliche visuelle Systeme.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       PAGE NUMBER
+       ========================================= -->
+
+  <div class="bio-page-number">
+  </div>
+
+
+  <!-- =========================================
+       ABOUT / PORTRAIT
+       ========================================= -->
+
+  <section class="bio-section">
+
+    <!-- LEFT -->
+
+    <div class="bio-section-label">
+
+      <strong>
+        Berlin, Deutschland
+      </strong>
+
+      <span>
+      </span>
+
+    </div>
+
+
+    <!-- RIGHT -->
+
+    <div class="bio-section-content bio-portrait-content">
+
+      <div class="bio-portrait-image">
+
+        <img
+          src="img/Me.jpg"
+          alt="Maria Giannisi"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       PAGE NUMBER
+       ========================================= -->
+
+  <div class="bio-page-number">
+  </div>
+
+
+  <!-- =========================================
+       EXPERIENCE
+       ========================================= -->
+
+  <section class="bio-section bio-experience-section">
+
+    <!-- LEFT -->
+
+    <div class="bio-section-label">
+
+      <strong>
+        Erfahrung
+      </strong>
+
+      <span>
+      </span>
+
+    </div>
+
+
+    <!-- RIGHT -->
+
+    <div class="bio-section-content">
+
+      <div class="bio-experience-list">
+
+
+        <div class="bio-experience-item">
+
+          <h3>
+            Großstadtzoo Studio für Gestaltung
+          </h3>
+
+          <p>
+            Grafikdesignerin
+            <span>[2024 – aktuell]</span>
+          </p>
+
+        </div>
+
+
+        <div class="bio-experience-item">
+
+          <h3>
+            Urban Electric Mobility Initiative //
+            Urban Living Lab Center
+          </h3>
+
+          <p>
+            Social Media Management & Grafikdesign
+            <span>[2023 – 2024]</span>
+          </p>
+
+        </div>
+
+
+        <div class="bio-experience-item">
+
+          <h3>
+            Reiner Lemoine Institut
+          </h3>
+
+          <p>
+            Interface Design
+            <span>[2020 – 2021]</span>
+          </p>
+
+        </div>
+
+
+        <div class="bio-experience-item">
+
+          <h3>
+            Fachhochschule Potsdam
+          </h3>
+
+          <p>
+            Fachbereich Interface Design
+            <span>[2020 – 2024]</span>
+          </p>
+
+        </div>
+
+
+        <div class="bio-experience-item">
+
+          <h3>
+            Akelius Languages GmbH
+          </h3>
+
+          <p>
+            Content & Foto Editor
+            <span>[2019 – 2020]</span>
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+<!-- =========================================
      FOOTER
      ========================================= -->
 
 <footer>
 
-    <div class="footer-content">
-  
-      <div class="footer-left">
-  
-        <a href="mailto:ma.gi@hotmail.co.uk">
-          © Maria Giannisi, 2026
-        </a>
-  
-        <a
-          href="https://www.linkedin.com/in/maria-giannisi-0198899b/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-  
-        <a
-          href="https://www.instagram.com/maria_giannisi/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-  
-      </div>
-  
-  
-      <div class="footer-right">
-        Alle Rechte vorbehalten.
-      </div>
-  
+  <div class="footer-content">
+
+    <div class="footer-left">
+
+      <a href="mailto:ma.gi@hotmail.co.uk">
+        © Maria Giannisi, 2026
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/maria-giannisi-0198899b/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://www.instagram.com/maria_giannisi/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
     </div>
-  
-  </footer>
 
-    <script>
-        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()";
-        const targetText = "Maria Giannisi";
-        const scrambleElement = document.getElementById("scramble");
 
-        let interval = null;
+    <div class="footer-right">
+      Alle Rechte vorbehalten.
+    </div>
 
-        function scramble() {
-            let iteration = 0;
+  </div>
 
-            clearInterval(interval);
+</footer>
 
-            interval = setInterval(() => {
-                scrambleElement.innerText = scrambleElement.innerText
-                    .split("")
-                    .map((letter, index) => {
-                        if (index < iteration) {
-                            return targetText[index];
-                        }
-                        return letters[Math.floor(Math.random() * letters.length)];
-                    })
-                    .join("");
-
-                if (iteration >= targetText.length) { 
-                    clearInterval(interval);
-                    setTimeout(scramble, 3000); // Restart after 3 seconds pause
-                }
-
-                iteration += 1 / 3;
-            }, 30);
-        }
-
-        // Start scrambling on page load
-        window.onload = scramble;
-    </script>
 
 </body>
 </html>

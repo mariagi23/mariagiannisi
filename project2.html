@@ -1,124 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 4</title>
+
+    <title>Großstadtzoo Project</title>
+
     <link rel="icon" href="img/Favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+
     <style>
-        /* Enable smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
 
         @font-face {
-            font-family: 'AktivGrotesk';
-            src: url('font/AktivGroteskCorp-Regular.ttf');
+            font-family: "AktivGrotesk";
+            src: url("font/AktivGroteskCorp-Regular.ttf");
         }
 
         @font-face {
-    font-family: "AktivGroteskMedium";
-    src: url("font/AktivGroteskCorp-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-    
-  }
-
+            font-family: "AktivGroteskMedium";
+            src: url("font/AktivGroteskCorp-Medium.ttf") format("truetype");
+            font-weight: 500;
+            font-style: normal;
+        }
     </style>
 </head>
+
+
 <body>
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
 
     <header>
         <div class="header-content">
+
             <div class="logo">
-                <h1><a href="index.html" data-value="Maria Giannisi">Maria Giannisi</a></h1>
+                <h1>
+                    <a href="index.html">Maria Giannisi</a>
+                </h1>
             </div>
+
             <nav>
                 <ul>
-                    <li><a href="Bio.html">Bio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <a href="Bio-de.html">Bio</a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:ma.gi@hotmail.co.uk">Kontakt</a>
+                    </li>
                 </ul>
             </nav>
+
             <div class="language-switcher">
-                <a href="project2.html">EN</a> | <a href="project2-de.html">DE</a>
+                <a href="project2.html">EN</a> |
+                <a href="project2-de.html">DE</a>
             </div>
+
         </div>
     </header>
 
-    <section class="project-details">
 
-            <!-- First Row (3 columns) -->
-     <div class="project-info">
-        <div class="project-title">WEB DESIGN</div>
-        <div class="project-type">FIGMA</div>
-        <div class="project-description"> Großstadtzoo is a design studio founded in 2016 and based in Berlin, with the noble goal of making the world a little bit better. At its core is the animated ß in "Großstadtzoo", introducing a dynamic and vibrant identity element that brings movement and energy to the brand.<br> 
-            <br>The modular grid structure allows for flexible content presentation, while the bold red accent color reinforces the studio’s confident and socially engaged character.
-             </div>
-     </div>
+    <!-- =========================================
+         PROJECT HERO
+         ========================================= -->
 
-    </section>     
+    <div class="project-hero">
+        <img
+            src="img/Großstadtzoo_Website.jpg"
+            alt="Großstadtzoo Website"
+        >
+    </div>
 
-    <div class="full-media-wrapper">
-        <video id="brochureVideo" class="full-media" controls>
-          <source src="vds/GSZO.mp4" type="video/mp4">
-        </video>
-      
-      </div>
-       
 
-      <!-- Credits -->
-      <div class="credits">
+    <!-- =========================================
+         ABOUT THE PROJECT
+         ========================================= -->
+
+    <section class="project-about">
+
+        <!-- LEFT -->
+
+        <div class="project-about-label">
+            Über das Projekt
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="project-about-content">
+
+            <div class="project-description">
+
+                <p>
+                    Der Großstadtzoo ist ein in 2016 gegründetes Designstudio
+                    mit Sitz in Berlin mit dem hehren und nicht ganz bescheidenen
+                    Ziel, die Welt ein Stückchen besser zu machen.
+                </p>
+
+                <p>
+                    Die Website von Großstadtzoo spiegelt den spielerischen und
+                    zugleich engagierten Charakter des Studios wider. Im Zentrum
+                    steht das animierte ß im Namen „Großstadtzoo“, das dem Auftritt
+                    Dynamik und Lebendigkeit verleiht. Ein modulares Raster sorgt
+                    für eine flexible Inhaltsstruktur, während das kräftige Rot
+                    als Akzentfarbe dem Erscheinungsbild eine selbstbewusste und
+                    eigenständige Note verleiht.
+                </p>
+
+            </div>
+
+
+            <!-- PROJECT INFORMATION -->
+
+            <div class="project-meta">
+
+                <div class="project-meta-row">
+
+                    <span class="project-meta-label">
+                        Leistungen
+                    </span>
+
+                    <span class="project-meta-value">
+                        Webdesign
+                    </span>
+
+                </div>
+
+
+                <div class="project-meta-row">
+
+                    <span class="project-meta-label">
+                        Tool
+                    </span>
+
+                    <span class="project-meta-value">
+                        Figma
+                    </span>
+
+                </div>
+
+
+                <div class="project-meta-row">
+
+                    <span class="project-meta-label">
+                        Jahr
+                    </span>
+
+                    <span class="project-meta-value">
+                        2026
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             MAIN VIDEO
+             ========================================= -->
+
+        <div class="full-media-wrapper">
+
+            <video
+                id="brochureVideo"
+                class="full-media"
+                controls
+            >
+                <source
+                    src="vds/GSZO.mp4"
+                    type="video/mp4"
+                >
+            </video>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CREDITS
+         ========================================= -->
+
+    <div class="credits">
         <p>
-            <br>Teamwork: Jennifer Tix, Klaus Günther & Caro Eichstaedt</br>
-            All presented projects and their rights belong to Großstadtzoo Studio für Gestaltung.
-            
-            <br> https://www.grossstadtzoo.de </br>
+            Teamwork: Jennifer Tix, Klaus Günther & Caro Eichstaedt
+            <br>
+            Alle präsentierten Projekte und deren Rechte liegen bei
+            Großstadtzoo Studio für Gestaltung.
+            <br>
+            <a
+                href="https://www.grossstadtzoo.de"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                www.grossstadtzoo.de
+            </a>
         </p>
     </div>
-        
+
+
+    <!-- =========================================
+         PROJECT NAVIGATION
+         ========================================= -->
+
     <div class="navigation-wrapper">
-        <a href="index.html" class="back-btn">Back to Projects</a>
-        <a href="social-media-tegut.html" class="next-btn">Next Project</a>
+
+        <a
+            href="index-de.html"
+            class="back-btn"
+        >
+            Zurück zu allen Projekten
+        </a>
+
+        <a
+            href="social-media-tegut-de.html"
+            class="next-btn"
+        >
+            Nächstes Projekt
+        </a>
+
     </div>
 
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
 
     <footer>
 
         <div class="footer-content">
-    
-          <div class="footer-left">
-    
-            <a href="mailto:ma.gi@hotmail.co.uk">
-              © Maria Giannisi, 2026
-            </a>
-    
-            <a
-              href="https://www.linkedin.com/in/maria-giannisi-0198899b/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-    
-            <a
-              href="https://www.instagram.com/maria_giannisi/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
-    
-          </div>
-    
-    
-          <div class="footer-right">
-            All rights reserved.
-          </div>
-    
+
+            <div class="footer-left">
+
+                <a href="mailto:ma.gi@hotmail.co.uk">
+                    © Maria Giannisi, 2026
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/maria-giannisi-0198899b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://www.instagram.com/maria_giannisi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+            </div>
+
+
+            <div class="footer-right">
+                Alle Rechte vorbehalten.
+            </div>
+
         </div>
-    
-      </footer>
+
+    </footer>
 
 
 </body>
